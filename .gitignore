@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+# Virtual Environment
+venv/
+.venv/
+# VS Code
+.vscode/
+# Environment Files
+*.env
+langfuse_key.env
+langfuse_mcp_key.env
+openai_key.env
+# Mac
+.DS_Store
+# Logs
+*.log
+# Generated Reports
+review_output.json
+# Jupyter
+.ipynb_checkpoints/
+.deepeval/
+langfuse/
+*.ipynb
