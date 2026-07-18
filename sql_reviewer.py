@@ -38,12 +38,14 @@ def review_sql(sql):
     "joins": joins
     }
     report["ai_review"] = ai_review
-
-     # Langfuse Logging
-    log_sql_review(
-        sql,
-        ai_review
-    )
+    try:
+        # Langfuse Logging
+        log_sql_review(
+            sql,
+            ai_review
+        )
+    except Exception as e:
+        print(f"Langfuse error: {e}")
 
 
     return report
