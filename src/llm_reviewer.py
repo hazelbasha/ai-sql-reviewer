@@ -2,7 +2,9 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv('/Users/z003xsjz/Documents/ScalarAI/ai-sql-reviewer/openai_key.env')  # reads .env file in the current directory
+#load_dotenv('/Users/z003xsjz/Documents/ScalarAI/ai-sql-reviewer/openai_key.env')  # reads .env file in the current directory
+load_dotenv()
+
 
 api_key = os.getenv("OPENAI_API_KEY")
 
