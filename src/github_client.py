@@ -2,9 +2,9 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv("/Users/z003xsjz/Documents/ScalarAI/ai-sql-review-git/ai-sql-reviewer/github_key.env")
-
-TOKEN = os.getenv("GITHUB_TOKEN")
+#load_dotenv("/Users/z003xsjz/Documents/ScalarAI/ai-sql-review-git/ai-sql-reviewer/github_key.env")
+load_dotenv()
+TOKEN = os.getenv("TOKEN_GITHUB")
 headers = {
         "Authorization": f"Bearer {TOKEN}",
         "Accept": "application/vnd.github+json"
@@ -57,7 +57,7 @@ def post_pr_comment(
         headers=headers,
         json=payload
     )
-
+    print("Comment URL:", url)
     print(f"Comment Status: {response.status_code}")
     print(response.text)
 
