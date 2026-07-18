@@ -8,7 +8,7 @@ from src.github_client import (
     post_pr_comment
 )
 
-from src.sql_reviewer import review_sql
+from sql_reviewer import review_sql
 from pr_comment_generator import generate_pr_comment
 
 
