@@ -65,14 +65,14 @@ for file in files:
         )
         all_comments.append(error_comment)
 
-    if all_comments:
-        final_comment = "# AI SQL Review Report\n\n" + "\n\n---\n\n".join(all_comments)
+if all_comments:
+    final_comment = "# AI SQL Review Report\n\n" + "\n\n---\n\n".join(all_comments)
 
-        post_pr_comment(
-            owner,
-            repo,
-            pr_number,
-            final_comment
-        )
-    else:
-        print("No SQL files found in PR.")
+    post_pr_comment(
+        owner,
+        repo,
+        pr_number,
+        final_comment
+    )
+else:
+    print("No SQL files found in PR.")

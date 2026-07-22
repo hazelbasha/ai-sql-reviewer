@@ -14,7 +14,7 @@ headers = {
 
 def get_pr_files(owner, repo, pr_number):
 
-    print("TOKEN:",TOKEN)
+    #print("TOKEN:",TOKEN)
 
     url = (
         f"https://api.github.com/repos/"
