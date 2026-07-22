@@ -78,6 +78,25 @@ Validation requirements:
 - If an identifier appears wrong, suggest the most likely intended identifier.
 - If schema is unavailable, mark findings as "possible typo" or "possible schema mismatch".
 - If schema is provided, validate strictly against it.
+- Preserve normal SQL review behavior for non-ALTER SQL.
+
+Additional guidance for ALTER TABLE statements:
+- Apply ALTER-specific review only if the SQL script contains ALTER TABLE statements.
+- Use the provided schema metadata to review schema change safety and migration risk.
+- Validate that referenced tables exist in schema metadata.
+- Validate that referenced columns exist in schema metadata.
+- Flag ADD COLUMN risks, especially adding NOT NULL columns without DEFAULT values on populated tables.
+- Flag DROP COLUMN risks, especially when the column does not exist or participates in a foreign key.
+- Flag MODIFY COLUMN and CHANGE COLUMN risks, including type changes, truncation risk, compatibility concerns, and nullable-to-NOT NULL changes.
+- Flag changes affecting foreign key columns or dependent relationships.
+- Flag ALTER operations on large tables that may cause locking, expensive migration, long execution time, or deployment risk.
+- When raising ALTER-related findings, clearly explain the migration risk and suggest a safer approach where possible, such as backfilling first, adding a DEFAULT, splitting the migration into phases, or validating data before enforcing constraints.
+
+Review behavior:
+- Use existing local findings as strong signals and incorporate them into the final review.
+- Do not ignore local findings unless they are clearly incorrect.
+- If both local findings and schema metadata indicate an ALTER-related issue, strengthen the confidence of that review note.
+- If no issues are found, explicitly say so.
 
 For each issue found, provide:
 - Category

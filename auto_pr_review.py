@@ -25,7 +25,7 @@ print(f"Repo: {repo}")
 print(f"PR Number: {pr_number}")
 
 # Load local schema file once
-schema_file_path = "src/overture_schema.json"
+schema_file_path = "src/overture_schema_v2.json"
 schema = load_schema_from_json(schema_file_path)
 
 files = get_pr_files(
