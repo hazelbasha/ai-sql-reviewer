@@ -8,21 +8,19 @@ from src.sql_parser import (
 )
 from src.llm_reviewer import review_sql_with_llm
 from src.langfuse_logger import log_sql_review
+from src.schema_validator import validate_identifiers_against_schema
 
 
 
 
 
-
-def review_sql(sql):
+def review_sql(sql, schema=None):
 
     findings = []
 
     findings.extend(run_rules(sql))
 
-    score = calculate_score(findings)
-
-    report = build_report(score, findings)
+    
 
     tables = extract_tables(sql)
 
@@ -30,7 +28,27 @@ def review_sql(sql):
 
     joins = count_joins(sql)
 
-    ai_review = review_sql_with_llm(sql)  
+    if schema:
+        findings.extend(
+            validate_identifiers_against_schema(
+                tables=tables,
+                columns=columns,
+                schema=schema
+            )
+        )
+
+    score = calculate_score(findings)
+
+    report = build_report(score, findings)
+    # ai_review = review_sql_with_llm(sql)  
+
+    ai_review = review_sql_with_llm(
+        sql=sql,
+        schema=schema,
+        extracted_tables=tables,
+        extracted_columns=columns,
+        existing_findings=findings
+    )
 
     report["metadata"] = {
     "tables": tables,

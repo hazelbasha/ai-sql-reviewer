@@ -1,0 +1,6680 @@
+{
+  "AccessToken": {
+    "columns": {
+      "id": "bigint",
+      "access_token": "varchar",
+      "code": "varchar",
+      "ip_address": "varchar",
+      "last_use": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "acting_user_id": "bigint",
+      "client_user_id": "bigint",
+      "device_app_install_id": "bigint",
+      "organization_domain_id": "bigint",
+      "device_id": "bigint"
+    }
+  },
+  "AccessTokenMapping": {
+    "columns": {
+      "id": "bigint",
+      "access_token_id": "bigint",
+      "jwt_token": "text",
+      "status_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ActivationEntry": {
+    "columns": {
+      "id": "bigint",
+      "activation_uuid": "varchar",
+      "device_generated_virtual_ticket_uuid": "varchar",
+      "time_created": "datetime",
+      "virtual_ticket_uuid": "varchar"
+    }
+  },
+  "ActivationRestriction": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "cutoff_year": "int",
+      "cutoff_month": "int",
+      "cutoff_day": "int",
+      "cutoff_hour": "int",
+      "cutoff_minute": "int",
+      "cutoff_second": "int",
+      "cutoff_timezone": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "bit",
+      "product_id": "bigint",
+      "start_cutoff_day": "int",
+      "start_cutoff_day_of_week": "int",
+      "start_cutoff_hour": "int",
+      "start_cutoff_minute": "int",
+      "start_cutoff_month": "int",
+      "start_cutoff_second": "int",
+      "start_cutoff_year": "int",
+      "stop_cutoff_day": "int",
+      "stop_cutoff_day_of_week": "int",
+      "stop_cutoff_hour": "int",
+      "stop_cutoff_minute": "int",
+      "stop_cutoff_month": "int",
+      "stop_cutoff_second": "int",
+      "stop_cutoff_year": "int",
+      "first_activation_only": "bit"
+    }
+  },
+  "ActivationRestrictionException": {
+    "columns": {
+      "id": "bigint",
+      "cutoff_timezone": "varchar",
+      "first_activation_only": "bit",
+      "start_cutoff_day": "int",
+      "start_cutoff_day_of_week": "int",
+      "start_cutoff_hour": "int",
+      "start_cutoff_minute": "int",
+      "start_cutoff_month": "int",
+      "start_cutoff_second": "int",
+      "start_cutoff_year": "int",
+      "stop_cutoff_day": "int",
+      "stop_cutoff_day_of_week": "int",
+      "stop_cutoff_hour": "int",
+      "stop_cutoff_minute": "int",
+      "stop_cutoff_month": "int",
+      "stop_cutoff_second": "int",
+      "stop_cutoff_year": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "activation_restriction_id": "bigint"
+    }
+  },
+  "ActivationRestriction_Product": {
+    "columns": {
+      "activation_restrictions_id": "bigint",
+      "products_id": "bigint"
+    }
+  },
+  "ActiveTicketScreenEvent": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "event_id": "bigint",
+      "default_ticket_screen_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Ad": {
+    "columns": {
+      "id": "bigint",
+      "active_end": "datetime",
+      "active_start": "datetime",
+      "content": "longtext",
+      "milliseconds": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "created_by_id": "bigint",
+      "device_os_id": "bigint",
+      "event_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "AdServe": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "ad_id": "bigint",
+      "pass_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "AdServeArchive": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "ad_id": "bigint",
+      "pass_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "AdServe_CA": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "ad_id": "bigint",
+      "pass_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "Address": {
+    "columns": {
+      "id": "bigint",
+      "address_1": "varchar",
+      "address_2": "varchar",
+      "city": "varchar",
+      "country": "varchar",
+      "email": "varchar",
+      "fax": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "nickname": "varchar",
+      "phone": "varchar",
+      "postal_code": "varchar",
+      "status": "int",
+      "street": "varchar",
+      "street_number": "varchar",
+      "territory": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "unit": "varchar",
+      "url": "longtext",
+      "uuid": "varchar",
+      "subscriber_id": "bigint",
+      "user_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_address_id": "int",
+      "nyww_legacy_user_id": "int",
+      "first_name": "varchar",
+      "last_name": "varchar",
+      "state": "varchar",
+      "is_default": "tinyint"
+    }
+  },
+  "App": {
+    "columns": {
+      "id": "bigint",
+      "hashed_auth_token": "varchar",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "App_SEQ": {
+    "columns": {
+      "next_val": "bigint"
+    }
+  },
+  "ArbitraryMissingInventory": {
+    "columns": {
+      "id": "bigint",
+      "count": "int",
+      "note": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "inventory_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "AttributeKey": {
+    "columns": {
+      "id": "int",
+      "key_name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "AttributeValue": {
+    "columns": {
+      "id": "int",
+      "attribute_key_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "value_id": "int"
+    }
+  },
+  "BATCH_JOB_EXECUTION": {
+    "columns": {
+      "JOB_EXECUTION_ID": "bigint",
+      "VERSION": "bigint",
+      "JOB_INSTANCE_ID": "bigint",
+      "CREATE_TIME": "datetime",
+      "START_TIME": "datetime",
+      "END_TIME": "datetime",
+      "STATUS": "varchar",
+      "EXIT_CODE": "varchar",
+      "EXIT_MESSAGE": "varchar",
+      "LAST_UPDATED": "datetime",
+      "JOB_CONFIGURATION_LOCATION": "varchar"
+    }
+  },
+  "BATCH_JOB_EXECUTION_CONTEXT": {
+    "columns": {
+      "JOB_EXECUTION_ID": "bigint",
+      "SHORT_CONTEXT": "varchar",
+      "SERIALIZED_CONTEXT": "text"
+    }
+  },
+  "BATCH_JOB_EXECUTION_PARAMS": {
+    "columns": {
+      "JOB_EXECUTION_ID": "bigint",
+      "TYPE_CD": "varchar",
+      "KEY_NAME": "varchar",
+      "STRING_VAL": "varchar",
+      "DATE_VAL": "datetime",
+      "LONG_VAL": "bigint",
+      "DOUBLE_VAL": "double",
+      "IDENTIFYING": "char"
+    }
+  },
+  "BATCH_JOB_EXECUTION_SEQ": {
+    "columns": {
+      "ID": "bigint",
+      "UNIQUE_KEY": "char"
+    }
+  },
+  "BATCH_JOB_INSTANCE": {
+    "columns": {
+      "JOB_INSTANCE_ID": "bigint",
+      "VERSION": "bigint",
+      "JOB_NAME": "varchar",
+      "JOB_KEY": "varchar"
+    }
+  },
+  "BATCH_JOB_SEQ": {
+    "columns": {
+      "ID": "bigint",
+      "UNIQUE_KEY": "char"
+    }
+  },
+  "BATCH_STEP_EXECUTION": {
+    "columns": {
+      "STEP_EXECUTION_ID": "bigint",
+      "VERSION": "bigint",
+      "STEP_NAME": "varchar",
+      "JOB_EXECUTION_ID": "bigint",
+      "START_TIME": "datetime",
+      "END_TIME": "datetime",
+      "STATUS": "varchar",
+      "COMMIT_COUNT": "bigint",
+      "READ_COUNT": "bigint",
+      "FILTER_COUNT": "bigint",
+      "WRITE_COUNT": "bigint",
+      "READ_SKIP_COUNT": "bigint",
+      "WRITE_SKIP_COUNT": "bigint",
+      "PROCESS_SKIP_COUNT": "bigint",
+      "ROLLBACK_COUNT": "bigint",
+      "EXIT_CODE": "varchar",
+      "EXIT_MESSAGE": "varchar",
+      "LAST_UPDATED": "datetime"
+    }
+  },
+  "BATCH_STEP_EXECUTION_CONTEXT": {
+    "columns": {
+      "STEP_EXECUTION_ID": "bigint",
+      "SHORT_CONTEXT": "varchar",
+      "SERIALIZED_CONTEXT": "text"
+    }
+  },
+  "BATCH_STEP_EXECUTION_SEQ": {
+    "columns": {
+      "ID": "bigint",
+      "UNIQUE_KEY": "char"
+    }
+  },
+  "BM_Status": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar"
+    }
+  },
+  "BM_Type": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar"
+    }
+  },
+  "BarcodePayload": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "barcode_payload_data": "longtext",
+      "barcode_specs_id": "int",
+      "pass_id": "bigint",
+      "barcode_payload_string": "longtext",
+      "uuid": "varchar",
+      "merchant_user_id": "bigint",
+      "pass_expiration_time": "datetime"
+    }
+  },
+  "BarcodePayloadArchive": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "barcode_payload_data": "longtext",
+      "barcode_specs_id": "int",
+      "pass_id": "bigint",
+      "barcode_payload_string": "longtext",
+      "uuid": "varchar",
+      "merchant_user_id": "bigint",
+      "pass_expiration_time": "datetime"
+    }
+  },
+  "BarcodePayload_CA": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "barcode_payload_data": "longtext",
+      "barcode_specs_id": "int",
+      "pass_id": "bigint",
+      "barcode_payload_string": "longtext",
+      "uuid": "varchar",
+      "merchant_user_id": "bigint",
+      "pass_expiration_time": "datetime"
+    }
+  },
+  "BarcodeSpecs": {
+    "columns": {
+      "id": "int",
+      "uuid": "varchar",
+      "name": "varchar",
+      "status": "int",
+      "key_name": "varchar",
+      "barcode_type": "varchar",
+      "refresh_rate": "varchar"
+    }
+  },
+  "BaseProduct": {
+    "columns": {
+      "id": "int",
+      "organization_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "theme_id": "int",
+      "short_name_id": "int",
+      "short_description_id": "int"
+    }
+  },
+  "BaseProductAttribute": {
+    "columns": {
+      "id": "int",
+      "product_id": "int",
+      "attribute_key_id": "int",
+      "type": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "BaseProductCategory": {
+    "columns": {
+      "id": "int",
+      "base_product_id": "int",
+      "category_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Block": {
+    "columns": {
+      "id": "bigint",
+      "current_version": "int",
+      "keyname": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "status": "int"
+    }
+  },
+  "BlockVersion": {
+    "columns": {
+      "id": "bigint",
+      "body": "longtext",
+      "locale": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "uuid": "varchar",
+      "version": "int",
+      "block_id": "bigint"
+    }
+  },
+  "BulkOrder": {
+    "columns": {
+      "id": "bigint",
+      "original_total": "int",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total": "int",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "client_id": "bigint",
+      "created_by": "bigint",
+      "shipping_method_id": "bigint",
+      "shipping_address_id": "bigint"
+    }
+  },
+  "BulkOrderConfig": {
+    "columns": {
+      "id": "bigint",
+      "config_key_value_id": "bigint",
+      "organization_id": "bigint"
+    }
+  },
+  "BulkOrderItem": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "unit_price": "int",
+      "list_price": "int",
+      "status": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "bulk_order_id": "bigint",
+      "product_id": "bigint",
+      "type": "int",
+      "quantity": "int",
+      "purchased_order_item_id": "bigint"
+    }
+  },
+  "BulkPromoCodeTemp": {
+    "columns": {
+      "id": "bigint",
+      "job_audit_id": "bigint",
+      "offer_config_id": "bigint",
+      "promo_codes_quantity": "bigint",
+      "promo_codes": "longtext"
+    }
+  },
+  "BulkSpoilPasses": {
+    "columns": {
+      "id": "bigint",
+      "file_name": "varchar",
+      "log_note": "mediumtext",
+      "status": "int",
+      "spoil_count": "int",
+      "already_spoiled_count": "int",
+      "access_token_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "error_response": "mediumtext",
+      "spoil_type": "varchar"
+    }
+  },
+  "CartRule": {
+    "columns": {
+      "id": "int",
+      "apply_to": "int",
+      "end_date": "datetime",
+      "name": "varchar",
+      "organization_id": "bigint",
+      "priority": "int",
+      "start_date": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "CartRuleOrderCondition": {
+    "columns": {
+      "id": "int",
+      "amount": "int",
+      "cart_rule_id": "int",
+      "number_of_items": "int",
+      "number_of_distinct_products": "int",
+      "operator": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total_type": "int",
+      "uuid": "varchar"
+    }
+  },
+  "CartRuleProductCondition": {
+    "columns": {
+      "id": "int",
+      "cart_rule_id": "int",
+      "number_allowed_in_cart": "int",
+      "operator": "int",
+      "product_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "CartRuleProductGroup": {
+    "columns": {
+      "id": "int",
+      "cart_rule_id": "int",
+      "product_group_id": "bigint",
+      "rule_applicability": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "CartRuleVisibility": {
+    "columns": {
+      "id": "int",
+      "cart_rule_id": "int",
+      "client_id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Category": {
+    "columns": {
+      "id": "bigint",
+      "lft": "int",
+      "rgft": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "parent_id": "bigint",
+      "short_name": "int",
+      "short_description": "int",
+      "node_type": "int",
+      "organization_id": "int",
+      "god_key": "varchar",
+      "image_url": "varchar",
+      "width": "varchar",
+      "accessibility_text": "int"
+    }
+  },
+  "Client": {
+    "columns": {
+      "id": "bigint",
+      "client_id": "varchar",
+      "client_secret": "varchar",
+      "description": "tinytext",
+      "image_url": "tinytext",
+      "login_message": "longtext",
+      "name": "varchar",
+      "pass_locking_enabled": "bit",
+      "redirect_uri": "longtext",
+      "required_permissions": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "version_control_enabled": "bit",
+      "web_url": "tinytext",
+      "user_id": "bigint",
+      "password_grant_allowed": "bit",
+      "json_object_format_type": "int",
+      "address_required": "bit",
+      "allow_anonymous_signup": "bit",
+      "send_signup_email": "bit",
+      "addressRequired": "bit",
+      "allowAnonymousSignup": "bit",
+      "clientId": "varchar",
+      "clientSecret": "varchar",
+      "imageUrl": "longtext",
+      "jsonObjectFormatType": "int",
+      "loginMessage": "longtext",
+      "passLockingEnabled": "bit",
+      "passwordGrantAllowed": "bit",
+      "redirectUri": "longtext",
+      "requiredPermissions": "longtext",
+      "sendSignupEmail": "bit",
+      "timeCreated": "datetime",
+      "timeModified": "datetime",
+      "versionControlEnabled": "bit",
+      "webUrl": "longtext"
+    }
+  },
+  "ClientUser": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "last_login": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total_logins": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "user_id": "bigint",
+      "totalLogins": "int"
+    }
+  },
+  "ConfigKeyValue": {
+    "columns": {
+      "id": "bigint",
+      "field_name": "varchar",
+      "value": "varchar"
+    }
+  },
+  "Contract": {
+    "columns": {
+      "id": "bigint",
+      "end_date": "datetime",
+      "start_date": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_organization_id": "bigint",
+      "reselling_organization_id": "bigint",
+      "type": "int",
+      "contract_name": "varchar",
+      "contract_number": "varchar",
+      "subscriber_emails": "tinytext",
+      "biller_id": "bigint",
+      "billing_period_id": "bigint"
+    }
+  },
+  "CustomerProductGroup": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "bigint",
+      "uuid": "varchar"
+    }
+  },
+  "CustomerProductGroup_Product": {
+    "columns": {
+      "customer_product_groups_id": "bigint",
+      "products_id": "bigint"
+    }
+  },
+  "CustomerProductGroup_UserAccount": {
+    "columns": {
+      "CustomerProductGroup_id": "bigint",
+      "users_id": "bigint"
+    }
+  },
+  "DATABASECHANGELOG": {
+    "columns": {
+      "ID": "varchar",
+      "AUTHOR": "varchar",
+      "FILENAME": "varchar",
+      "DATEEXECUTED": "datetime",
+      "ORDEREXECUTED": "int",
+      "EXECTYPE": "varchar",
+      "MD5SUM": "varchar",
+      "DESCRIPTION": "varchar",
+      "COMMENTS": "varchar",
+      "TAG": "varchar",
+      "LIQUIBASE": "varchar",
+      "CONTEXTS": "varchar",
+      "LABELS": "varchar",
+      "DEPLOYMENT_ID": "varchar"
+    }
+  },
+  "DATABASECHANGELOGLOCK": {
+    "columns": {
+      "ID": "int",
+      "LOCKED": "bit",
+      "LOCKGRANTED": "datetime",
+      "LOCKEDBY": "varchar"
+    }
+  },
+  "DataDiversTest": {
+    "columns": {
+      "id": "int",
+      "uuid": "varchar"
+    }
+  },
+  "DataDiversTest1": {
+    "columns": {
+      "id": "int",
+      "uuid": "varchar"
+    }
+  },
+  "DeepLinkAction": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "action": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "DeepLinkActivity": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "deep_link_action_id": "bigint",
+      "token_uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "DeepLinkAttribute": {
+    "columns": {
+      "id": "bigint",
+      "deep_link_attribute_name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "deep_link_action_id": "bigint",
+      "organization_id": "int"
+    }
+  },
+  "DeepLinkKey": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "key_name": "varchar"
+    }
+  },
+  "DeepLinkKeyValue": {
+    "columns": {
+      "id": "bigint",
+      "value": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "deep_link_key_id": "bigint",
+      "deep_link_attribute_id": "bigint",
+      "organization_id": "int"
+    }
+  },
+  "DefaultProductSetting": {
+    "columns": {
+      "id": "bigint",
+      "partner_org_id": "bigint",
+      "partner_id": "bigint",
+      "default_product_id": "bigint",
+      "uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Device": {
+    "columns": {
+      "id": "bigint",
+      "imei": "varchar",
+      "model": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "owner_id": "bigint",
+      "status": "int",
+      "uicc_id": "varchar",
+      "uicc_status": "int",
+      "uicc_authenticated": "bit",
+      "operating_system_identifier": "varchar",
+      "device_os_version": "varchar",
+      "device_os_id": "bigint",
+      "nickname": "longtext",
+      "thirdPartyUser_id": "bigint",
+      "device_token": "varchar"
+    }
+  },
+  "DeviceAppInstallation": {
+    "columns": {
+      "id": "bigint",
+      "app_version": "varchar",
+      "device_ip_address": "varchar",
+      "device_type": "varchar",
+      "device_user_agent": "varchar",
+      "device_uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "device_os_id": "bigint",
+      "device_id": "bigint",
+      "app_installation_identifier": "varchar",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "device_token": "varchar"
+    }
+  },
+  "DeviceAppMinimumVersion": {
+    "columns": {
+      "client_id": "bigint",
+      "device_os_id": "bigint",
+      "id": "bigint",
+      "minimum_version": "varchar"
+    }
+  },
+  "DeviceOS": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar"
+    }
+  },
+  "DiscountServe": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "user_id": "bigint",
+      "client_id": "bigint",
+      "partner_client_id": "bigint",
+      "type": "int",
+      "status": "int",
+      "total_price": "int",
+      "discounted_price": "int",
+      "discount_percentage": "float",
+      "order_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "DiscountServePriceAdjustment": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "discount_serve_id": "bigint",
+      "qty": "int",
+      "total_price": "int",
+      "discounted_price": "int",
+      "discount_percentage": "float",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Entry": {
+    "columns": {
+      "id": "int",
+      "organization_id": "int",
+      "short_name": "int",
+      "number_of_uses": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "status": "int"
+    }
+  },
+  "EntryActivationRestriction": {
+    "columns": {
+      "id": "int",
+      "entry_id": "int",
+      "activation_restriction_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "EntryExpirationRule": {
+    "columns": {
+      "id": "int",
+      "expiration_rule_id": "bigint",
+      "entry_id": "int",
+      "type": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "EntryIdentityRequirements": {
+    "columns": {
+      "id": "int",
+      "entry_id": "int",
+      "identity_requirement_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "EntryJourney": {
+    "columns": {
+      "id": "int",
+      "entry_id": "int",
+      "journey_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "is_processed": "tinyint"
+    }
+  },
+  "EntryVisualPassSpecificationCalendar": {
+    "columns": {
+      "id": "int",
+      "entry_id": "int",
+      "visual_pass_specification_calendar_id": "bigint",
+      "visual_pass_specification_cache_limit": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Event": {
+    "columns": {
+      "id": "bigint",
+      "date_end": "datetime",
+      "date_start": "datetime",
+      "description": "longtext",
+      "description_translation_id": "int",
+      "foreign_class": "varchar",
+      "foreign_id": "varchar",
+      "has_end_date": "bit",
+      "has_time": "bit",
+      "image_url": "longtext",
+      "short_title": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "v3_enabled": "bit",
+      "organization_id": "bigint",
+      "venue_id": "bigint",
+      "name": "varchar",
+      "short_name": "varchar",
+      "route_id": "varchar",
+      "v3_cache_time_limit": "int",
+      "init_support": "bit",
+      "last_sync_time": "datetime",
+      "whitelist_suffix": "varchar",
+      "category_label_id": "bigint",
+      "specification_calendar_id": "bigint",
+      "slug": "varchar",
+      "special_event_tile": "bit",
+      "deeplink_url": "varchar",
+      "regional_offer_tile": "bit",
+      "lft": "int",
+      "rght": "int",
+      "parent_id": "bigint",
+      "third_party_identifier": "varchar",
+      "weight": "int"
+    }
+  },
+  "EventManager": {
+    "columns": {
+      "id": "bigint",
+      "event_id": "bigint",
+      "manager_id": "bigint"
+    }
+  },
+  "EventMappingConfiguration": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "event_id": "bigint",
+      "organization_id": "int",
+      "is_price_base_fare_capping": "tinyint",
+      "is_connect_fare_type": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "status": "int"
+    }
+  },
+  "EventV2": {
+    "columns": {
+      "id": "int",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "organization_id": "int",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "EventV2Times": {
+    "columns": {
+      "id": "int",
+      "end_time": "datetime",
+      "event_id": "int",
+      "sequence_number": "int",
+      "start_time": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "ExpirationRule": {
+    "columns": {
+      "id": "bigint",
+      "after_unit": "int",
+      "after_value": "int",
+      "at_day": "int",
+      "at_hour": "int",
+      "at_minute": "int",
+      "at_month": "int",
+      "at_second": "int",
+      "at_timezone": "varchar",
+      "at_year": "int",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "ExpirationRuleMappingConfiguration": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "expiration_rule_id": "bigint",
+      "organization_id": "int",
+      "is_price_base_fare_capping": "tinyint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "feature_name": "varchar"
+    }
+  },
+  "FareBatchCitation": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "request_duplicate_count": "int",
+      "request_hash": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint"
+    }
+  },
+  "FareCitation": {
+    "columns": {
+      "id": "bigint",
+      "citation_number": "varchar",
+      "notes": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_occurred": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "fare_evader_id": "bigint",
+      "fare_inspector_id": "bigint",
+      "organization_id": "bigint",
+      "service_level": "varchar",
+      "unit_number": "varchar",
+      "route_number": "varchar",
+      "direction": "varchar",
+      "order_id": "bigint",
+      "in_court": "bit"
+    }
+  },
+  "FareCitationAttributeKey": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "bigint"
+    }
+  },
+  "FareCitationAttributeValue": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "key_id": "bigint"
+    }
+  },
+  "FareCitationConfig": {
+    "columns": {
+      "id": "int",
+      "organization_id": "bigint",
+      "active_period": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "status": "int"
+    }
+  },
+  "FareCitationEmailParameter": {
+    "columns": {
+      "id": "int",
+      "organization_id": "bigint",
+      "send_email_after_days": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "status": "int"
+    }
+  },
+  "FareCitationsByServiceLevel": {
+    "columns": {
+      "time_occurred": "varchar",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int"
+    }
+  },
+  "FareEvader": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "person_id": "bigint"
+    }
+  },
+  "FareEvasionIssuedCitations": {
+    "columns": {
+      "time_occurred": "datetime",
+      "swipes_rail": "int",
+      "swipes_brt": "int",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int",
+      "court_rail": "int",
+      "court_brt": "int"
+    }
+  },
+  "FareEvasionScannedTickets": {
+    "columns": {
+      "time_occurred": "datetime",
+      "swipes_rail": "int",
+      "swipes_brt": "int",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int",
+      "court_rail": "int",
+      "court_brt": "int"
+    }
+  },
+  "FareEvasionScannedTicketsArchive": {
+    "columns": {
+      "time_occurred": "datetime",
+      "swipes_rail": "int",
+      "swipes_brt": "int",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int",
+      "court_rail": "int",
+      "court_brt": "int"
+    }
+  },
+  "FareEvasionSwipedTickets": {
+    "columns": {
+      "time_occurred": "datetime",
+      "swipes_rail": "int",
+      "swipes_brt": "int",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int",
+      "court_rail": "int",
+      "court_brt": "int"
+    }
+  },
+  "FareEvasionSwipedTicketsArchive": {
+    "columns": {
+      "time_occurred": "datetime",
+      "swipes_rail": "int",
+      "swipes_brt": "int",
+      "warnings_rail": "int",
+      "warnings_brt": "int",
+      "citations_rail": "int",
+      "citations_brt": "int",
+      "court_rail": "int",
+      "court_brt": "int"
+    }
+  },
+  "FeedbackEmailQueue": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_id": "bigint",
+      "organization_id": "int",
+      "status": "int",
+      "request_data": "longtext"
+    }
+  },
+  "Filter": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "related_filter_uuid": "varchar",
+      "display_name": "int",
+      "placeholder_text": "int",
+      "list_priority": "int",
+      "filter_type": "varchar",
+      "organization_id": "bigint",
+      "category_id": "bigint",
+      "type": "varchar",
+      "target_entity": "varchar",
+      "field_path": "varchar",
+      "nested_path": "varchar",
+      "aggregation_path": "varchar",
+      "status": "int",
+      "version": "varchar",
+      "filter_order": "varchar",
+      "aggregation_path_long_name": "varchar"
+    }
+  },
+  "FraudUser": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "is_fraud": "tinyint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "expiration_time": "datetime",
+      "device_app_install_id": "bigint",
+      "app_installation_identifier": "varchar",
+      "user_email": "varchar",
+      "email_domain": "varchar"
+    }
+  },
+  "GPSPVMessage": {
+    "columns": {
+      "id": "bigint",
+      "response_qualifier": "varchar",
+      "message_identifier": "varchar",
+      "time_of_the_day": "bigint",
+      "latitude": "varchar",
+      "longitude": "varchar",
+      "speed": "int",
+      "heading": "int",
+      "source": "int",
+      "age": "int",
+      "vehicle_id": "varchar",
+      "checksum": "varchar",
+      "date_from": "datetime",
+      "date_to": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "gps_time": "datetime",
+      "version": "int"
+    }
+  },
+  "GPSPVMessageArchive": {
+    "columns": {
+      "id": "bigint",
+      "response_qualifier": "varchar",
+      "message_identifier": "varchar",
+      "time_of_the_day": "bigint",
+      "latitude": "varchar",
+      "longitude": "varchar",
+      "speed": "int",
+      "heading": "int",
+      "source": "int",
+      "age": "int",
+      "vehicle_id": "varchar",
+      "checksum": "varchar",
+      "date_from": "datetime",
+      "date_to": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "gps_time": "datetime",
+      "version": "int"
+    }
+  },
+  "GTFSAgency": {
+    "columns": {
+      "id": "bigint",
+      "agency_fare_url": "varchar",
+      "agency_id": "varchar",
+      "agency_lang": "varchar",
+      "agency_name": "varchar",
+      "agency_phone": "varchar",
+      "agency_timezone": "varchar",
+      "agency_url": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "GTFSCalendar": {
+    "columns": {
+      "id": "bigint",
+      "end_date": "varchar",
+      "friday": "varchar",
+      "monday": "varchar",
+      "saturday": "varchar",
+      "start_date": "varchar",
+      "sunday": "varchar",
+      "service_id": "varchar",
+      "thursday": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "tuesday": "varchar",
+      "wednesday": "varchar",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSCalendarDate": {
+    "columns": {
+      "id": "bigint",
+      "date": "varchar",
+      "exception_type": "varchar",
+      "service_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSFareAttribute": {
+    "columns": {
+      "id": "bigint",
+      "currency_type": "varchar",
+      "fare_id": "varchar",
+      "payment_method": "varchar",
+      "price": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transfer_duration": "varchar",
+      "transfers": "varchar",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSFareRule": {
+    "columns": {
+      "id": "bigint",
+      "fare_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "contains_id": "varchar",
+      "origin_id": "varchar",
+      "destination_id": "varchar",
+      "agency_id": "bigint",
+      "route_id": "bigint"
+    }
+  },
+  "GTFSFeedInfo": {
+    "columns": {
+      "id": "bigint",
+      "feed_end_date": "varchar",
+      "feed_lang": "varchar",
+      "feed_publisher_name": "varchar",
+      "feed_publisher_url": "varchar",
+      "feed_start_date": "varchar",
+      "feed_version": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSFrequency": {
+    "columns": {
+      "id": "bigint",
+      "end_time": "varchar",
+      "exact_times": "varchar",
+      "headway_secs": "varchar",
+      "start_time": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint",
+      "trip_id": "bigint"
+    }
+  },
+  "GTFSPeak": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSPeak_peaks": {
+    "columns": {
+      "peaks": "datetime",
+      "peaks_KEY": "datetime",
+      "GTFSPeak_id": "bigint"
+    }
+  },
+  "GTFSRoute": {
+    "columns": {
+      "id": "bigint",
+      "route_color": "varchar",
+      "route_desc": "varchar",
+      "route_id": "varchar",
+      "route_long_name": "varchar",
+      "route_short_name": "varchar",
+      "route_text_color": "varchar",
+      "route_type": "varchar",
+      "route_url": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSShape": {
+    "columns": {
+      "id": "bigint",
+      "shape_dist_traveled": "varchar",
+      "shape_id": "varchar",
+      "shape_pt_lat": "varchar",
+      "shape_pt_lon": "varchar",
+      "shape_pt_sequence": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint"
+    }
+  },
+  "GTFSStop": {
+    "columns": {
+      "id": "bigint",
+      "location_type": "int",
+      "stop_code": "varchar",
+      "stop_desc": "varchar",
+      "stop_id": "varchar",
+      "stop_lat": "varchar",
+      "stop_lon": "varchar",
+      "stop_name": "varchar",
+      "stop_timezone": "varchar",
+      "stop_url": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "zone_id": "varchar",
+      "published": "bit",
+      "wheelchair_boarding": "int",
+      "agency_id": "bigint",
+      "parent_station_id": "bigint",
+      "region_id": "bigint"
+    }
+  },
+  "GTFSStopTime": {
+    "columns": {
+      "id": "bigint",
+      "arrival_time": "varchar",
+      "departure_time": "varchar",
+      "drop_off_type": "varchar",
+      "pickup_type": "varchar",
+      "shape_dist_traveled": "varchar",
+      "stop_headsign": "varchar",
+      "stop_sequence": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "agency_id": "bigint",
+      "trip_id": "bigint",
+      "stop_id": "bigint"
+    }
+  },
+  "GTFSTransfer": {
+    "columns": {
+      "id": "bigint",
+      "min_transfer_time": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transfer_type": "varchar",
+      "agency_id": "bigint",
+      "to_stop_id": "bigint",
+      "from_stop_id": "bigint"
+    }
+  },
+  "GTFSTrip": {
+    "columns": {
+      "id": "bigint",
+      "direction_id": "varchar",
+      "block_id": "varchar",
+      "service_id": "varchar",
+      "shape_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "trip_headsign": "varchar",
+      "trip_short_name": "varchar",
+      "wheelchair_accessible": "int",
+      "trip_id": "varchar",
+      "bikes_allowed": "int",
+      "agency_id": "bigint",
+      "route_id": "bigint"
+    }
+  },
+  "GenerateDigitalPassesAndTransferBatch": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "current_user_id": "bigint",
+      "organization_id": "bigint",
+      "receiving_organization_id": "bigint",
+      "sending_organization_id": "bigint",
+      "transfer_id": "bigint"
+    }
+  },
+  "IdentityRequirements": {
+    "columns": {
+      "id": "int",
+      "type": "int",
+      "organization_id": "int",
+      "short_name": "varchar",
+      "short_description": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Inventory": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "creator_id": "bigint",
+      "organization_id": "bigint"
+    }
+  },
+  "InventoryItem": {
+    "columns": {
+      "id": "bigint",
+      "acquired_price": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "inventory_id": "bigint",
+      "product_id": "bigint",
+      "seq_int": "int",
+      "serial": "varchar"
+    }
+  },
+  "InventoryItemTransfer": {
+    "columns": {
+      "id": "bigint",
+      "complete": "bit",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "inventory_item_id": "bigint",
+      "transfer_id": "bigint",
+      "bulk_order_item_id": "bigint"
+    }
+  },
+  "Invite": {
+    "columns": {
+      "id": "bigint",
+      "email": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "converted_user_id": "bigint",
+      "from_user_id": "bigint"
+    }
+  },
+  "Job": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "keyname": "varchar",
+      "description": "varchar"
+    }
+  },
+  "JobQueue": {
+    "columns": {
+      "id": "bigint",
+      "job_name": "varchar",
+      "job_key": "varchar",
+      "job_description": "varchar"
+    }
+  },
+  "JobQueueAudit": {
+    "columns": {
+      "id": "bigint",
+      "job_id": "bigint",
+      "organization_id": "int",
+      "reference_uuid": "varchar",
+      "error_message": "varchar",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "JobQueueTask": {
+    "columns": {
+      "id": "bigint",
+      "task_name": "varchar",
+      "job_id": "bigint",
+      "dependent_task_id": "bigint",
+      "execution_class_name": "varchar",
+      "execution_method_name": "varchar"
+    }
+  },
+  "JobQueueTaskAudit": {
+    "columns": {
+      "id": "bigint",
+      "job_task_id": "bigint",
+      "job_audit_id": "bigint",
+      "req_data": "longtext",
+      "res_data": "longtext",
+      "error_message": "varchar",
+      "retry_count": "int",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Journey": {
+    "columns": {
+      "id": "int",
+      "route_id": "int",
+      "trip_id": "int",
+      "trip_config_id": "int",
+      "run_id": "int",
+      "origin_id": "int",
+      "destination_id": "int",
+      "zone_id": "int",
+      "from_zone_id": "int",
+      "to_zone_id": "int",
+      "vehicle_type_id": "smallint",
+      "organization_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "event_v2_id": "int",
+      "is_processed": "tinyint"
+    }
+  },
+  "JwtTokenConfiguration": {
+    "columns": {
+      "id": "bigint",
+      "token_expiration_hr_time": "int",
+      "refresh_token_expiration_hr_time": "int",
+      "token_not_before_use_ms_time": "int",
+      "token_issuer": "varchar",
+      "token_use": "varchar",
+      "token_type": "varchar",
+      "token_audience": "varchar",
+      "merchant_id": "bigint"
+    }
+  },
+  "JwtTokenConfigurationV2": {
+    "columns": {
+      "id": "bigint",
+      "token_expiration_hr_time": "int",
+      "refresh_token_expiration_hr_time": "int",
+      "token_not_before_use_ms_time": "int",
+      "token_issuer": "varchar",
+      "token_use": "varchar",
+      "token_type": "varchar",
+      "token_audience": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "client_id": "bigint",
+      "token_expiration_min_time": "int",
+      "use_active_token": "bit"
+    }
+  },
+  "LOAD_NAMES": {
+    "columns": {
+      "email_name": "varchar"
+    }
+  },
+  "Label": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "lft": "int",
+      "model": "varchar",
+      "name": "varchar",
+      "rght": "int",
+      "short_name": "varchar",
+      "slug": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "weight": "int",
+      "parent_id": "bigint",
+      "Label_test_1": "int",
+      "Label_2": "int",
+      "name_translation_id": "int",
+      "organization_id": "bigint"
+    }
+  },
+  "LabelUpdateLog": {
+    "columns": {
+      "id": "bigint",
+      "log": "varchar",
+      "product_uuid": "varchar",
+      "email": "varchar",
+      "label_id": "bigint",
+      "label_name": "varchar",
+      "parent_label_id": "bigint",
+      "parent_label_name": "varchar",
+      "n_label_id": "bigint",
+      "n_label_name": "varchar",
+      "n_parent_label_id": "bigint",
+      "n_parent_label_name": "varchar"
+    }
+  },
+  "Label_Label": {
+    "columns": {
+      "Label_id": "bigint",
+      "parents_id": "bigint"
+    }
+  },
+  "LegalAgreement": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "body": "longtext",
+      "time_active": "datetime",
+      "time_expired": "datetime",
+      "title": "varchar",
+      "type": "int",
+      "version": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "LiquiDemoAdam": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "LiquiDemoIain": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar"
+    }
+  },
+  "LiquiDemoIain2": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar"
+    }
+  },
+  "LiquiDemoNick": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "LiquiDemoNilangshu": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "LiquiDemoSam": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "LiquiDemoSourav": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar"
+    }
+  },
+  "LiquiDemo_BackendTeam": {
+    "columns": {
+      "id": "int",
+      "first_name": "varchar",
+      "last_name": "varchar",
+      "hobbies": "varchar"
+    }
+  },
+  "LiquiDemo_ravi": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "LiquiDemonikhil": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar"
+    }
+  },
+  "Locale": {
+    "columns": {
+      "id": "int",
+      "lang": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Location": {
+    "columns": {
+      "id": "int",
+      "latitude": "double",
+      "longitude": "double",
+      "long_description_id": "int",
+      "short_description_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "MailingList": {
+    "columns": {
+      "id": "bigint",
+      "organization_id": "bigint",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "status": "int"
+    }
+  },
+  "MailingListUser": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "mailing_list_id": "bigint",
+      "user_email": "varchar",
+      "is_valid_email": "tinyint"
+    }
+  },
+  "ManagerRelation": {
+    "columns": {
+      "id": "bigint",
+      "relation_id": "bigint",
+      "legacy_org_id": "bigint",
+      "is_default": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "MediaType": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "MenuItem": {
+    "columns": {
+      "id": "bigint",
+      "description": "varchar",
+      "lft": "int",
+      "request_url": "varchar",
+      "rght": "int",
+      "uuid": "varchar",
+      "default_set": "bit",
+      "client_id": "bigint",
+      "keyname": "varchar",
+      "description_id": "int"
+    }
+  },
+  "MenuItem_UserAccount": {
+    "columns": {
+      "MenuItem_id": "bigint",
+      "organizations_id": "bigint",
+      "id": "bigint"
+    }
+  },
+  "MerchantAccount": {
+    "columns": {
+      "id": "bigint",
+      "gid": "varchar",
+      "order_reference_num_digits": "int",
+      "order_reference_prefix": "varchar",
+      "serial_number_counter_num_digits": "int",
+      "serial_number_current": "int",
+      "serial_number_prefix": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "user_id": "bigint",
+      "gtfs_agency_id": "varchar",
+      "receipt_legal": "longtext",
+      "auto_close_batch": "bit",
+      "alternate_gateway_url": "varchar",
+      "receipt_from_id": "bigint",
+      "alternate_keys_url": "varchar",
+      "end_of_operation_time": "varchar",
+      "daily_summary_email": "varchar",
+      "daily_summary_time": "time",
+      "colors": "longtext",
+      "fraud_alert_email": "varchar",
+      "init_support": "bit",
+      "last_sync_time": "datetime",
+      "transaction_method": "int",
+      "data_dump_allowed": "bit",
+      "data_dump_url": "varchar",
+      "last_data_dump_time": "datetime",
+      "batch_settle_time": "time",
+      "allow_receipt_ticket": "bit",
+      "in_marketplace": "bit",
+      "vertical_logo_url": "longtext",
+      "currency_code": "varchar",
+      "secondary_logo_url": "longtext",
+      "product_selection_method": "int",
+      "iata_compliant": "bit",
+      "active_v3_change_allowed": "tinyint",
+      "apple_wallet_allowed": "bit",
+      "country_code": "varchar",
+      "auto_activate_pass": "tinyint",
+      "chargeback_supported": "bit",
+      "barcode_payload": "int",
+      "pin_code_length": "bigint",
+      "eager_pass_batch_process": "tinyint",
+      "email_medium": "int",
+      "notification_type": "int",
+      "passunauthorized_lock": "tinyint",
+      "pagination_per_page": "int",
+      "requires_email_verification": "bit",
+      "create_auto_storedvalue_wallet": "tinyint",
+      "stop_name_type": "int",
+      "is_stored_wallet_enabled": "bit",
+      "monthly_allowed_installation": "int",
+      "is_fraud_check_enabled": "bit",
+      "is_jwt_authentication": "bit",
+      "god_filters_enabled": "tinyint",
+      "echeck_max_amount": "int",
+      "feedback_email": "varchar"
+    }
+  },
+  "MerchantActivityLog": {
+    "columns": {
+      "id": "bigint",
+      "activity_type": "varchar",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "order_uuid": "varchar",
+      "user_id": "bigint",
+      "organization_id": "int",
+      "mode_of_open": "varchar",
+      "time_of_open": "datetime"
+    }
+  },
+  "MerchantRegion": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "merchant_id": "bigint",
+      "region_id": "bigint"
+    }
+  },
+  "Merchant_LastOrderReferenceNo": {
+    "columns": {
+      "id": "bigint",
+      "merchant_account_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "last_reference_digits": "bigint"
+    }
+  },
+  "MobileApp": {
+    "columns": {
+      "id": "bigint",
+      "url": "varchar",
+      "device_os_id": "bigint",
+      "merchant_account_id": "bigint"
+    }
+  },
+  "NYCFUnlockUsers": {
+    "columns": {
+      "customer_id": "bigint",
+      "passes_locked_to_app_version": "varchar",
+      "full_name": "varchar",
+      "email": "varchar",
+      "user_uuid": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "NYCFUnlockUsers_stg": {
+    "columns": {
+      "customer_id": "bigint",
+      "passes_locked_to_app_version": "varchar",
+      "full_name": "varchar",
+      "email": "varchar",
+      "user_uuid": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "NYWWDuration": {
+    "columns": {
+      "id": "bigint",
+      "time": "varchar",
+      "weekend": "tinyint",
+      "destination_stop_id": "bigint",
+      "origin_stop_id": "bigint"
+    }
+  },
+  "Note": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "foreign_class": "varchar",
+      "linked_faremedium_uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "uuid": "varchar",
+      "author_id": "bigint",
+      "subject_id": "bigint",
+      "created_by_id": "bigint",
+      "organization_id": "bigint",
+      "nyww_legacy_author_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "reason_code_id": "bigint",
+      "reason_comments": "longtext",
+      "linked_pass_id": "bigint",
+      "linked_order_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "Notification": {
+    "columns": {
+      "id": "bigint",
+      "body": "longtext",
+      "end_date": "datetime",
+      "receiver_count": "int",
+      "resource": "varchar",
+      "resource_uuid": "varchar",
+      "start_date": "datetime",
+      "status": "int",
+      "teaser": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "type": "int",
+      "url": "varchar",
+      "uuid": "varchar",
+      "action_id": "bigint",
+      "user_id": "bigint",
+      "show_in_tiles": "bit",
+      "recipient_id": "bigint"
+    }
+  },
+  "NotificationAction": {
+    "columns": {
+      "id": "bigint",
+      "keyname": "varchar",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "weight": "int",
+      "notifier_id": "bigint",
+      "parent_id": "bigint",
+      "lft": "int",
+      "rght": "int",
+      "auto_enroll": "varchar",
+      "name_translation_id": "int"
+    }
+  },
+  "NotificationEvent": {
+    "columns": {
+      "id": "int",
+      "event_name": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "NotificationPermission": {
+    "columns": {
+      "id": "bigint",
+      "allow": "bit",
+      "method": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "action_id": "bigint",
+      "notifier_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "NotificationTemplate": {
+    "columns": {
+      "id": "int",
+      "notification_event_id": "int",
+      "title": "varchar",
+      "body": "varchar",
+      "uuid": "varchar",
+      "teaser": "varchar",
+      "url": "varchar",
+      "type": "int",
+      "show_in_tiles": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "OBVRouteServiceLevel": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "event_id": "bigint",
+      "uuid": "varchar"
+    }
+  },
+  "Offer": {
+    "columns": {
+      "id": "bigint",
+      "active_from": "datetime",
+      "active_to": "datetime",
+      "banner_image": "varchar",
+      "campaign_description": "longtext",
+      "campaign_title": "varchar",
+      "last_scan": "datetime",
+      "offer_description": "longtext",
+      "offer_teaser": "varchar",
+      "offer_title": "varchar",
+      "status": "int",
+      "thumbnail_image": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "expiration_rule_id": "bigint",
+      "organization_id": "bigint",
+      "start_rule_id": "bigint",
+      "serve_limit": "int",
+      "product_group_id": "bigint",
+      "short_name": "varchar",
+      "long_name": "varchar",
+      "short_description": "varchar",
+      "long_description": "varchar",
+      "trigger_type": "int",
+      "overall_quantity": "int"
+    }
+  },
+  "OfferCode": {
+    "columns": {
+      "id": "int",
+      "text": "varchar",
+      "offer_config_id": "bigint",
+      "number_of_uses": "int",
+      "remaining_uses": "int",
+      "usage_per_user": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "OfferCodeArchive": {
+    "columns": {
+      "text": "varchar",
+      "offer_config_id": "bigint",
+      "number_of_uses": "int",
+      "remaining_uses": "int",
+      "usage_per_user": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "id": "int"
+    }
+  },
+  "OfferCodeSequence": {
+    "columns": {
+      "sequence_number": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "OfferConfig": {
+    "columns": {
+      "id": "bigint",
+      "trigger_type": "int",
+      "offer_id": "bigint",
+      "discount_type": "int",
+      "offer_code_type": "int",
+      "offer_code_prefix": "varchar",
+      "quantity": "int",
+      "offer_code_length": "int",
+      "auto_generate": "tinyint",
+      "status": "int",
+      "price_adjustment_id": "bigint",
+      "usage_limit_per_order": "int",
+      "apply_to": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "usage_type": "int",
+      "download_url": "varchar"
+    }
+  },
+  "OfferConfigCartRule": {
+    "columns": {
+      "id": "bigint",
+      "offer_config_id": "bigint",
+      "cart_rule_id": "int"
+    }
+  },
+  "OfferConfigNotificationType": {
+    "columns": {
+      "id": "bigint",
+      "offer_config_id": "bigint",
+      "notification_type": "int"
+    }
+  },
+  "OfferConfigProductGroup": {
+    "columns": {
+      "id": "bigint",
+      "offer_config_id": "bigint",
+      "product_group_id": "bigint",
+      "status": "int"
+    }
+  },
+  "OfferRedeemableProduct": {
+    "columns": {
+      "id": "bigint",
+      "quantity": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "offer_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "OfferRedeemableProductAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "offer_redeemable_product_id": "bigint"
+    }
+  },
+  "OfferServe": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "uuid": "varchar",
+      "valid_from": "datetime",
+      "valid_to": "datetime",
+      "client_id": "bigint",
+      "offer_id": "bigint",
+      "receiver_id": "bigint",
+      "notification_id": "bigint",
+      "subscriber_id": "bigint",
+      "pass_id": "bigint",
+      "order_id": "bigint",
+      "offer_config_id": "bigint",
+      "offer_code_id": "int"
+    }
+  },
+  "OfferServePriceAdjustment": {
+    "columns": {
+      "id": "int",
+      "offer_serve_id": "bigint",
+      "price_adjustment_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "OfferTriggerProduct": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "quantity": "int",
+      "offer_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "OrderInvoice": {
+    "columns": {
+      "id": "bigint",
+      "bus_voucher": "varchar",
+      "delivery_method": "int",
+      "original_total": "int",
+      "override_description": "longtext",
+      "notes": "longtext",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "shipping_required": "bit",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_fulfilled": "datetime",
+      "time_modified": "datetime",
+      "time_paid": "datetime",
+      "time_purchased": "datetime",
+      "total": "int",
+      "type": "int",
+      "uuid": "varchar",
+      "billing_address_id": "bigint",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "shipping_address_id": "bigint",
+      "subscriber_id": "bigint",
+      "total_is_overridden": "bit",
+      "client_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "nyww_legacy_number_of_tickets": "int",
+      "trace_number": "varchar",
+      "errors_array_json": "longtext",
+      "shipping_method_id": "bigint",
+      "creator_id": "bigint",
+      "original_total_v2": "int",
+      "subtotal_v2": "int",
+      "total_v2": "int",
+      "refunds": "int",
+      "shipping_cost": "int",
+      "discount": "int",
+      "lat": "varchar",
+      "lon": "varchar",
+      "device_app_install_id": "bigint"
+    }
+  },
+  "OrderInvoiceHistory": {
+    "columns": {
+      "id": "bigint",
+      "delivery_method": "int",
+      "original_total": "int",
+      "notes": "longtext",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "shipping_required": "bit",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_fulfilled": "datetime",
+      "time_modified": "datetime",
+      "time_paid": "datetime",
+      "time_purchased": "datetime",
+      "total": "int",
+      "uuid": "varchar",
+      "billing_address_id": "bigint",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "shipping_address_id": "bigint",
+      "creator_id": "bigint",
+      "update_type": "varchar"
+    }
+  },
+  "OrderInvoice_CA": {
+    "columns": {
+      "id": "bigint",
+      "bus_voucher": "varchar",
+      "delivery_method": "int",
+      "original_total": "int",
+      "override_description": "longtext",
+      "notes": "longtext",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "shipping_required": "bit",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_fulfilled": "datetime",
+      "time_modified": "datetime",
+      "time_paid": "datetime",
+      "time_purchased": "datetime",
+      "total": "int",
+      "type": "int",
+      "uuid": "varchar",
+      "billing_address_id": "bigint",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "shipping_address_id": "bigint",
+      "subscriber_id": "bigint",
+      "total_is_overridden": "bit",
+      "client_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "nyww_legacy_number_of_tickets": "int",
+      "trace_number": "varchar",
+      "errors_array_json": "longtext",
+      "shipping_method_id": "bigint",
+      "creator_id": "bigint",
+      "original_total_v2": "int",
+      "subtotal_v2": "int",
+      "total_v2": "int",
+      "refunds": "int",
+      "shipping_cost": "int",
+      "discount": "int",
+      "lat": "varchar",
+      "lon": "varchar",
+      "device_app_install_id": "bigint"
+    }
+  },
+  "OrderInvoice_copy": {
+    "columns": {
+      "id": "bigint",
+      "bus_voucher": "varchar",
+      "delivery_method": "int",
+      "original_total": "int",
+      "override_description": "longtext",
+      "notes": "longtext",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "shipping_required": "bit",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_fulfilled": "datetime",
+      "time_modified": "datetime",
+      "time_paid": "datetime",
+      "time_purchased": "datetime",
+      "total": "int",
+      "type": "int",
+      "uuid": "varchar",
+      "billing_address_id": "bigint",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "shipping_address_id": "bigint",
+      "subscriber_id": "bigint",
+      "total_is_overridden": "bit",
+      "client_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "nyww_legacy_number_of_tickets": "int",
+      "trace_number": "varchar",
+      "errors_array_json": "longtext",
+      "shipping_method_id": "bigint",
+      "creator_id": "bigint",
+      "original_total_v2": "int",
+      "subtotal_v2": "int",
+      "total_v2": "int",
+      "refunds": "int",
+      "shipping_cost": "int",
+      "discount": "int",
+      "lat": "varchar",
+      "lon": "varchar",
+      "device_app_install_id": "bigint"
+    }
+  },
+  "OrderItem": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "name": "varchar",
+      "price": "int",
+      "removed": "bit",
+      "sku": "varchar",
+      "status": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total": "int",
+      "uuid": "varchar",
+      "end_user_id": "bigint",
+      "order_id": "bigint",
+      "product_id": "bigint",
+      "voucher_id": "bigint",
+      "original_price": "int",
+      "override_description": "longtext",
+      "price_is_overridden": "bit",
+      "tmp_pass_id": "int",
+      "tmp_multipass_uuid": "varchar",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_paper_ticket_id": "int",
+      "parent_subscription_id": "bigint",
+      "offer_serve_id": "bigint",
+      "credited_order_item_id": "bigint",
+      "product_group_user_id": "bigint",
+      "upsell_pass_id": "bigint",
+      "original_price_v2": "int",
+      "price_v2": "int",
+      "total_v2": "int",
+      "type": "int",
+      "mbo_discount": "int"
+    }
+  },
+  "OrderItemAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_id": "bigint",
+      "event_id": "bigint",
+      "nyww_legacy_paper_ticket_id": "int"
+    }
+  },
+  "OrderItemAttribute_CA": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_id": "bigint",
+      "event_id": "bigint",
+      "nyww_legacy_paper_ticket_id": "int"
+    }
+  },
+  "OrderItemEntryJourney": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "order_item_id": "bigint",
+      "entry_journey_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "OrderItemEntryJourney_CA": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "entry_journey_id": "bigint",
+      "order_item_id": "bigint"
+    }
+  },
+  "OrderItemInputField": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "order_item_id": "bigint",
+      "input_field_key": "varchar",
+      "input_field_value": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "merchant_id": "bigint"
+    }
+  },
+  "OrderItemOfferServe": {
+    "columns": {
+      "id": "bigint",
+      "order_item_id": "bigint",
+      "offer_serve_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "OrderItem_CA": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "name": "varchar",
+      "price": "int",
+      "removed": "bit",
+      "sku": "varchar",
+      "status": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total": "int",
+      "uuid": "varchar",
+      "end_user_id": "bigint",
+      "order_id": "bigint",
+      "product_id": "bigint",
+      "voucher_id": "bigint",
+      "original_price": "int",
+      "override_description": "longtext",
+      "price_is_overridden": "bit",
+      "tmp_pass_id": "int",
+      "tmp_multipass_uuid": "varchar",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_paper_ticket_id": "int",
+      "parent_subscription_id": "bigint",
+      "offer_serve_id": "bigint",
+      "credited_order_item_id": "bigint",
+      "product_group_user_id": "bigint",
+      "upsell_pass_id": "bigint",
+      "original_price_v2": "int",
+      "price_v2": "int",
+      "total_v2": "int",
+      "type": "int",
+      "mbo_discount": "int"
+    }
+  },
+  "OrderItem_ProductEvent": {
+    "columns": {
+      "OrderItem_id": "bigint",
+      "product_events_id": "bigint"
+    }
+  },
+  "OrderItem_copy": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "name": "varchar",
+      "price": "int",
+      "removed": "bit",
+      "sku": "varchar",
+      "status": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total": "int",
+      "uuid": "varchar",
+      "end_user_id": "bigint",
+      "order_id": "bigint",
+      "product_id": "bigint",
+      "voucher_id": "bigint",
+      "original_price": "int",
+      "override_description": "longtext",
+      "price_is_overridden": "bit",
+      "tmp_pass_id": "int",
+      "tmp_multipass_uuid": "varchar",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_paper_ticket_id": "int",
+      "parent_subscription_id": "bigint",
+      "offer_serve_id": "bigint",
+      "credited_order_item_id": "bigint",
+      "product_group_user_id": "bigint",
+      "upsell_pass_id": "bigint",
+      "original_price_v2": "int",
+      "price_v2": "int",
+      "total_v2": "int",
+      "type": "int",
+      "mbo_discount": "int"
+    }
+  },
+  "OrderMetadata": {
+    "columns": {
+      "id": "bigint",
+      "order_id": "bigint",
+      "order_item_id": "bigint",
+      "merchant_activity_id": "bigint",
+      "key_name": "varchar",
+      "key_value": "varchar",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "source_type": "varchar"
+    }
+  },
+  "OrderVoucherCode": {
+    "columns": {
+      "id": "int",
+      "voucher_code_id": "int",
+      "order_id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Organization": {
+    "columns": {
+      "id": "int",
+      "long_name_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_account_id": "bigint",
+      "uuid": "varchar",
+      "agency_id": "varchar",
+      "org_slug": "varchar",
+      "location": "varchar",
+      "display_order": "int"
+    }
+  },
+  "OrganizationClientConfig": {
+    "columns": {
+      "id": "bigint",
+      "client_id": "bigint",
+      "config_key_value_id": "bigint",
+      "organization_id": "int"
+    }
+  },
+  "OrganizationClientConfig_SEQ": {
+    "columns": {
+      "next_val": "bigint"
+    }
+  },
+  "OrganizationConfig": {
+    "columns": {
+      "id": "bigint",
+      "organization_id": "int",
+      "config_key_value_id": "bigint"
+    }
+  },
+  "OrganizationFeatureFormat": {
+    "columns": {
+      "id": "bigint",
+      "feature": "varchar",
+      "org_id": "int",
+      "locale_id": "int",
+      "format": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "status": "int"
+    }
+  },
+  "OrganizationOperatorConfig": {
+    "columns": {
+      "id": "int",
+      "organization_id": "int",
+      "operator_id": "varchar",
+      "status_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "OrganizationServices": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "service_url": "varchar",
+      "organization_id": "int",
+      "client_id": "bigint",
+      "uuid": "varchar",
+      "status_id": "bigint",
+      "additional_info": "longtext"
+    }
+  },
+  "OrganizationServices_SEQ": {
+    "columns": {
+      "next_val": "bigint"
+    }
+  },
+  "OrganizationSupportedJob": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "int",
+      "job_id": "bigint",
+      "allow": "bit"
+    }
+  },
+  "OrganizationSupportedLocales": {
+    "columns": {
+      "id": "bigint",
+      "organization_id": "int",
+      "locale_id": "int"
+    }
+  },
+  "OrganizationSystemSettings": {
+    "columns": {
+      "id": "bigint",
+      "organization_id": "int",
+      "key": "varchar",
+      "value": "varchar"
+    }
+  },
+  "PDFUtility": {
+    "columns": {
+      "id": "bigint"
+    }
+  },
+  "PartnerUserPassDistributionLog": {
+    "columns": {
+      "id": "bigint",
+      "pass_distribution_log_id": "bigint",
+      "partner_user_uuid": "varchar"
+    }
+  },
+  "Pass": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "subscriber_id": "bigint",
+      "product_id": "bigint",
+      "client_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "nyww_legacy_user_id": "int",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_purchased_price": "int",
+      "nyww_legacy_multipass_uuid": "varchar",
+      "statement_item_id": "bigint",
+      "locked_for_status_using": "bit",
+      "locked_to_device_id": "bigint",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "locked_to_device_expiration_time": "datetime",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassActivity": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "pass_use_id": "bigint",
+      "type": "int",
+      "access_token_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint",
+      "origin_id": "bigint",
+      "direction": "bigint"
+    }
+  },
+  "PassActivityArchive": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "pass_use_id": "bigint",
+      "type": "int",
+      "access_token_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint",
+      "origin_id": "bigint",
+      "direction": "bigint"
+    }
+  },
+  "PassActivityArchiveMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_activity_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "location": "varchar",
+      "source_type": "int",
+      "f2": "varchar",
+      "f3": "varchar",
+      "f4": "varchar",
+      "f5": "varchar",
+      "f6": "varchar",
+      "f7": "varchar",
+      "f8": "varchar",
+      "f9": "varchar",
+      "f10": "varchar"
+    }
+  },
+  "PassActivityLocation": {
+    "columns": {
+      "id": "bigint",
+      "pass_activity_id": "bigint",
+      "lat": "varchar",
+      "lon": "varchar",
+      "vehicle_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "bigint"
+    }
+  },
+  "PassActivityMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_activity_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "location": "varchar",
+      "source_type": "int",
+      "f2": "varchar",
+      "f3": "varchar",
+      "f4": "varchar",
+      "f5": "varchar",
+      "f6": "varchar",
+      "f7": "varchar",
+      "f8": "varchar",
+      "f9": "varchar",
+      "f10": "varchar",
+      "f11": "varchar",
+      "f12": "varchar",
+      "f13": "varchar"
+    }
+  },
+  "PassActivityMapping_CA": {
+    "columns": {
+      "id": "bigint",
+      "pass_activity_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "location": "varchar",
+      "f1": "varchar",
+      "f2": "varchar",
+      "f3": "varchar",
+      "f4": "varchar",
+      "f5": "varchar",
+      "f6": "varchar",
+      "f7": "varchar",
+      "f8": "varchar",
+      "f9": "varchar",
+      "f10": "varchar"
+    }
+  },
+  "PassActivity_CA": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "pass_use_id": "bigint",
+      "type": "int",
+      "access_token_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint",
+      "origin_id": "bigint",
+      "direction": "bigint"
+    }
+  },
+  "PassArchive": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "locked_for_status_using": "bit",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "locked_to_device_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "product_id": "bigint",
+      "statement_item_id": "bigint",
+      "subscriber_id": "bigint",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassArchiveV2": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "locked_for_status_using": "bit",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "locked_to_device_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "product_id": "bigint",
+      "statement_item_id": "bigint",
+      "subscriber_id": "bigint",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_id": "bigint",
+      "nyww_legacy_pass_id": "int"
+    }
+  },
+  "PassAttributeArchive": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "PassAttribute_CA": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_id": "bigint",
+      "nyww_legacy_pass_id": "int"
+    }
+  },
+  "PassBatchProcessingQueue": {
+    "columns": {
+      "id": "bigint",
+      "organization_uuid": "varchar",
+      "req_body": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "uuid": "varchar",
+      "validation_audit_uuid": "varchar"
+    }
+  },
+  "PassBatchUse": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "current_user_id": "bigint",
+      "organization_id": "bigint",
+      "access_token_id": "bigint",
+      "source_type": "int",
+      "request_hash": "longtext",
+      "request_duplicate_count": "int",
+      "origin_filename": "varchar",
+      "request_hash_v2": "varchar"
+    }
+  },
+  "PassBatchUseArchive": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "request_body": "longtext",
+      "result": "longtext",
+      "source_type": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "current_user_id": "bigint",
+      "organization_id": "bigint",
+      "origin_filename": "varchar",
+      "request_hash": "longtext",
+      "request_duplicate_count": "int",
+      "request_hash_v2": "varchar"
+    }
+  },
+  "PassBatchUse_CA": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "current_user_id": "bigint",
+      "organization_id": "bigint",
+      "access_token_id": "bigint",
+      "source_type": "int",
+      "request_hash": "longtext",
+      "request_duplicate_count": "int",
+      "origin_filename": "varchar",
+      "request_hash_v2": "varchar"
+    }
+  },
+  "PassCMTABackup": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "subscriber_id": "bigint",
+      "product_id": "bigint",
+      "client_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "nyww_legacy_user_id": "int",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_purchased_price": "int",
+      "nyww_legacy_multipass_uuid": "varchar",
+      "statement_item_id": "bigint",
+      "locked_for_status_using": "bit",
+      "locked_to_device_id": "bigint",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "locked_to_device_expiration_time": "datetime"
+    }
+  },
+  "PassDenial": {
+    "columns": {
+      "id": "bigint",
+      "block_id": "varchar",
+      "device_id": "varchar",
+      "expiration_time": "datetime",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "notes": "longtext",
+      "result_type": "int",
+      "route_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "vehicle_id": "varchar",
+      "device_app_installation_id": "bigint",
+      "pass_event_id": "bigint",
+      "pass_set_id": "bigint",
+      "pass_id": "bigint",
+      "pass_identifier": "varchar",
+      "media_type": "int",
+      "source": "int",
+      "event_id": "bigint",
+      "product_id": "bigint",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassDenialArchive": {
+    "columns": {
+      "id": "bigint",
+      "block_id": "varchar",
+      "device_id": "varchar",
+      "expiration_time": "datetime",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "notes": "longtext",
+      "result_type": "int",
+      "route_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "vehicle_id": "varchar",
+      "device_app_installation_id": "bigint",
+      "pass_event_id": "bigint",
+      "pass_set_id": "bigint",
+      "pass_id": "bigint",
+      "pass_identifier": "varchar",
+      "media_type": "int",
+      "source": "int",
+      "event_id": "bigint",
+      "product_id": "bigint",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassDenialArchiveMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_denial_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar"
+    }
+  },
+  "PassDenialMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_denial_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar"
+    }
+  },
+  "PassDenialMapping_CA": {
+    "columns": {
+      "id": "bigint",
+      "pass_denial_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar"
+    }
+  },
+  "PassDenial_CA": {
+    "columns": {
+      "id": "bigint",
+      "block_id": "varchar",
+      "device_id": "varchar",
+      "expiration_time": "datetime",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "notes": "longtext",
+      "result_type": "int",
+      "route_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "vehicle_id": "varchar",
+      "device_app_installation_id": "bigint",
+      "pass_event_id": "bigint",
+      "pass_set_id": "bigint",
+      "pass_id": "bigint",
+      "pass_identifier": "varchar",
+      "media_type": "int",
+      "source": "int",
+      "event_id": "bigint",
+      "product_id": "bigint",
+      "pass_batch_use_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassDistribution": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "contract_id": "bigint",
+      "price_adjustment_id": "bigint",
+      "access_token_id": "bigint",
+      "locale_id": "int",
+      "product_id": "bigint",
+      "type": "int",
+      "sftp_id": "bigint",
+      "audit_id": "bigint",
+      "export_file_url": "varchar",
+      "export_file_expiration_time": "datetime",
+      "sftp_batch_completed": "tinyint",
+      "batched_recipient_count": "int",
+      "request_body": "text"
+    }
+  },
+  "PassDistributionAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "pass_distribution_id": "bigint"
+    }
+  },
+  "PassDistributionLog": {
+    "columns": {
+      "id": "bigint",
+      "pass_distribution_id": "bigint",
+      "pass_id": "bigint",
+      "pass_unauth_id": "bigint",
+      "recipient_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PassDistributionMailingList": {
+    "columns": {
+      "id": "bigint",
+      "pass_distribution_id": "bigint",
+      "mailing_list_id": "bigint",
+      "qty": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "validation_completed": "tinyint"
+    }
+  },
+  "PassDistributionPassDataTmp": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "pass_distribution_transfer_queue_id": "bigint",
+      "pass_uuids": "mediumtext",
+      "pass_tokens": "mediumtext",
+      "pass_serials": "mediumtext",
+      "pass_short_serials": "mediumtext",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PassDistributionQueue": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "previous_attempt_time": "datetime",
+      "uuid": "varchar",
+      "retry_count": "int",
+      "processing_errors": "varchar",
+      "transfer_id": "bigint",
+      "pass_distribution_id": "bigint"
+    }
+  },
+  "PassDistributionRecepientMetaData": {
+    "columns": {
+      "id": "bigint",
+      "data": "varchar",
+      "type": "int",
+      "pass_distribution_recepient_id": "bigint"
+    }
+  },
+  "PassDistributionRecipient": {
+    "columns": {
+      "id": "bigint",
+      "registered": "tinyint",
+      "qty": "int",
+      "pass_distribution_id": "bigint",
+      "subscriber_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "PassDistributionTransferQueue": {
+    "columns": {
+      "id": "bigint",
+      "type": "varchar",
+      "transfer_id": "bigint",
+      "pass_distribution_id": "bigint",
+      "bulk_order_id": "bigint",
+      "total_count": "int",
+      "status": "int",
+      "distribution_status": "int",
+      "retry_count": "int",
+      "previous_attempt_time": "datetime",
+      "processing_errors": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PassDistributionValidationData": {
+    "columns": {
+      "id": "bigint",
+      "pass_distribution_id": "bigint",
+      "qty": "int",
+      "sftp_id": "bigint",
+      "user_email": "varchar",
+      "validation_status": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PassDistribution_registered_users": {
+    "columns": {
+      "pass_distribution_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "PassDistribution_subscribers": {
+    "columns": {
+      "pass_distribution_id": "bigint",
+      "subscriber_id": "bigint"
+    }
+  },
+  "PassDistribution_unregistered_users": {
+    "columns": {
+      "pass_distribution_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "PassEntry": {
+    "columns": {
+      "id": "bigint",
+      "is_bike": "tinyint",
+      "time_created": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "PassEntryJourney": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "entry_journey_id": "int",
+      "pass_id": "bigint"
+    }
+  },
+  "PassEntryJourneyArchive": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "pass_id": "bigint",
+      "entry_journey_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PassEntryJourney_CA": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "entry_journey_id": "int",
+      "pass_id": "bigint"
+    }
+  },
+  "PassEvent": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "event_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "issuer_id": "bigint",
+      "merchant_id": "bigint",
+      "pass_id": "bigint",
+      "weight": "int",
+      "duration_rule_id": "bigint",
+      "nyww_legacy_activation_duration": "varchar",
+      "nyww_legacy_route_short_name_for_event": "varchar",
+      "nyww_legacy_pass_id": "int"
+    }
+  },
+  "PassEventArchive": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "weight": "int",
+      "customer_id": "bigint",
+      "duration_rule_id": "bigint",
+      "event_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "issuer_id": "bigint",
+      "merchant_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "PassEventAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_event_id": "bigint"
+    }
+  },
+  "PassEventAttributeArchive": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_event_id": "bigint"
+    }
+  },
+  "PassEventAttribute_CA": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "order_item_attribute_id": "bigint",
+      "pass_event_id": "bigint"
+    }
+  },
+  "PassEvent_CA": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "event_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "issuer_id": "bigint",
+      "merchant_id": "bigint",
+      "pass_id": "bigint",
+      "weight": "int",
+      "duration_rule_id": "bigint",
+      "nyww_legacy_activation_duration": "varchar",
+      "nyww_legacy_route_short_name_for_event": "varchar",
+      "nyww_legacy_pass_id": "int"
+    }
+  },
+  "PassException": {
+    "columns": {
+      "id": "bigint",
+      "notes": "longtext",
+      "time": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "pass_identifier": "varchar",
+      "pass_id": "bigint",
+      "event_id": "bigint",
+      "organization_id": "bigint",
+      "created_by_id": "bigint",
+      "status": "int",
+      "uuid": "varchar",
+      "event_identifier": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "product_id": "bigint",
+      "type": "int",
+      "pass_status": "int",
+      "pass_unauthorized_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "pass_exception_batch_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassExceptionArchive": {
+    "columns": {
+      "id": "bigint",
+      "event_identifier": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "notes": "longtext",
+      "pass_identifier": "varchar",
+      "status": "int",
+      "time": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "created_by_id": "bigint",
+      "event_id": "bigint",
+      "organization_id": "bigint",
+      "pass_id": "bigint",
+      "product_id": "bigint",
+      "type": "int",
+      "pass_status": "int",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "pass_exception_batch_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassExceptionArchiveMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_exception_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "device_app_installation_id": "bigint",
+      "feature1": "varchar",
+      "feature2": "varchar",
+      "feature3": "varchar",
+      "source_type": "int"
+    }
+  },
+  "PassExceptionBatch": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "source_type": "int",
+      "origin_filename": "varchar",
+      "access_token_id": "bigint",
+      "request_hash": "longtext",
+      "request_duplicate_count": "int",
+      "organization_id": "bigint"
+    }
+  },
+  "PassExceptionBatchArchive": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "source_type": "int",
+      "origin_filename": "varchar",
+      "request_hash": "longtext",
+      "request_duplicate_count": "int",
+      "organization_id": "bigint"
+    }
+  },
+  "PassExceptionMapping": {
+    "columns": {
+      "id": "bigint",
+      "pass_exception_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "device_app_installation_id": "bigint",
+      "feature1": "varchar",
+      "feature2": "varchar",
+      "feature3": "varchar",
+      "source_type": "int"
+    }
+  },
+  "PassExceptionMapping_CA": {
+    "columns": {
+      "id": "bigint",
+      "pass_exception_id": "bigint",
+      "run": "varchar",
+      "operator": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "transaction_uuid": "varchar",
+      "device_app_installation_id": "bigint",
+      "feature1": "varchar",
+      "feature2": "varchar",
+      "feature3": "varchar",
+      "source_type": "int"
+    }
+  },
+  "PassException_CA": {
+    "columns": {
+      "id": "bigint",
+      "notes": "longtext",
+      "time": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "pass_identifier": "varchar",
+      "pass_id": "bigint",
+      "event_id": "bigint",
+      "organization_id": "bigint",
+      "created_by_id": "bigint",
+      "status": "int",
+      "uuid": "varchar",
+      "event_identifier": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "product_id": "bigint",
+      "type": "int",
+      "pass_status": "int",
+      "pass_unauthorized_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_batch_use_id": "int",
+      "pass_exception_batch_id": "int",
+      "parent_validator_id": "bigint",
+      "parent_vehicle_id": "bigint"
+    }
+  },
+  "PassFeatureLinks": {
+    "columns": {
+      "id": "bigint",
+      "pass_id": "bigint",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_transit_linked": "tinyint",
+      "feature_1": "varchar",
+      "feature_2": "varchar",
+      "feature_3": "varchar"
+    }
+  },
+  "PassFeatureLinksArchive": {
+    "columns": {
+      "id": "bigint",
+      "pass_id": "bigint",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_transit_linked": "tinyint",
+      "feature_1": "varchar",
+      "feature_2": "varchar",
+      "feature_3": "varchar"
+    }
+  },
+  "PassFeatureLinks_CA": {
+    "columns": {
+      "id": "bigint",
+      "pass_id": "bigint",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_transit_linked": "tinyint",
+      "feature_1": "varchar",
+      "feature_2": "varchar",
+      "feature_3": "varchar"
+    }
+  },
+  "PassInputField": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "pass_id": "bigint",
+      "input_field_key": "varchar",
+      "input_field_value": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "merchant_id": "bigint"
+    }
+  },
+  "PassInputFieldArchive": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "pass_id": "bigint",
+      "input_field_key": "varchar",
+      "input_field_value": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "merchant_id": "bigint"
+    }
+  },
+  "PassInputField_CA": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "pass_id": "bigint",
+      "input_field_key": "varchar",
+      "input_field_value": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "merchant_id": "bigint"
+    }
+  },
+  "PassSent": {
+    "columns": {
+      "id": "bigint",
+      "accepted": "bit",
+      "time_accepted": "datetime",
+      "time_sent": "datetime",
+      "to_email": "varchar",
+      "uuid": "varchar",
+      "from_user_id": "bigint",
+      "pass_id": "bigint",
+      "user_who_accepted_id": "bigint"
+    }
+  },
+  "PassSentArchive": {
+    "columns": {
+      "id": "bigint",
+      "accepted": "bit",
+      "time_accepted": "datetime",
+      "time_sent": "datetime",
+      "to_email": "varchar",
+      "uuid": "varchar",
+      "from_user_id": "bigint",
+      "pass_id": "bigint",
+      "user_who_accepted_id": "bigint"
+    }
+  },
+  "PassSent_CA": {
+    "columns": {
+      "id": "bigint",
+      "accepted": "bit",
+      "time_accepted": "datetime",
+      "time_sent": "datetime",
+      "to_email": "varchar",
+      "uuid": "varchar",
+      "from_user_id": "bigint",
+      "pass_id": "bigint",
+      "user_who_accepted_id": "bigint"
+    }
+  },
+  "PassSerialLookup": {
+    "columns": {
+      "id": "bigint",
+      "serial": "varchar",
+      "issuer_id": "bigint"
+    }
+  },
+  "PassSet": {
+    "columns": {
+      "id": "bigint",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "issuer_id": "bigint",
+      "merchant_id": "bigint",
+      "locked_to_device_id": "bigint"
+    }
+  },
+  "PassSetArchive": {
+    "columns": {
+      "id": "bigint",
+      "first_activation_time": "datetime",
+      "expiration_time": "datetime",
+      "serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "issuer_id": "bigint",
+      "locked_to_device_id": "bigint",
+      "merchant_id": "bigint"
+    }
+  },
+  "PassSetArchive_pass_ids": {
+    "columns": {
+      "PassSetArchive_id": "bigint",
+      "pass_ids": "bigint"
+    }
+  },
+  "PassSet_CA": {
+    "columns": {
+      "id": "bigint",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "issuer_id": "bigint",
+      "merchant_id": "bigint",
+      "locked_to_device_id": "bigint"
+    }
+  },
+  "PassSet_Pass": {
+    "columns": {
+      "pass_sets_id": "bigint",
+      "passes_id": "bigint"
+    }
+  },
+  "PassSet_Pass_CA": {
+    "columns": {
+      "pass_sets_id": "bigint",
+      "passes_id": "bigint"
+    }
+  },
+  "PassThirdPartyUser": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "third_party_user_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "PassThirdPartyUserArchive": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "third_party_user_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "PassThirdPartyUser_CA": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "third_party_user_id": "bigint",
+      "pass_id": "bigint"
+    }
+  },
+  "PassUnauthorized": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "product_id": "bigint",
+      "subscriber_id": "bigint",
+      "client_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "nyww_legacy_user_id": "int",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_purchased_price": "int",
+      "nyww_legacy_multipass_uuid": "varchar",
+      "locked_for_status_using": "bit",
+      "statement_item_id": "bigint",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "locked_to_device_expiration_time": "datetime",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassUnauthorized_bkp": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "product_id": "bigint",
+      "subscriber_id": "bigint",
+      "client_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "nyww_legacy_user_id": "int",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_purchased_price": "int",
+      "nyww_legacy_multipass_uuid": "varchar",
+      "locked_for_status_using": "bit",
+      "statement_item_id": "bigint",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "locked_to_device_expiration_time": "datetime",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassUnauthorized_locktest": {
+    "columns": {
+      "id": "bigint",
+      "time_create": "datetime",
+      "exception": "varchar",
+      "selected_id": "bigint"
+    }
+  },
+  "PassUse": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "expiration_time": "datetime",
+      "pass_set_id": "bigint",
+      "pass_event_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "notes": "longtext",
+      "device_app_installation_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_exception_id": "bigint"
+    }
+  },
+  "PassUseArchive": {
+    "columns": {
+      "id": "bigint",
+      "expiration_time": "datetime",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "pass_event_id": "bigint",
+      "pass_set_id": "bigint",
+      "notes": "longtext",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "device_app_installation_id": "bigint",
+      "pass_exception_id": "bigint"
+    }
+  },
+  "PassUseLocation": {
+    "columns": {
+      "id": "bigint",
+      "pass_use_id": "bigint",
+      "lat": "varchar",
+      "lon": "varchar",
+      "vehicle_id": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "bigint"
+    }
+  },
+  "PassUseOfferServe": {
+    "columns": {
+      "id": "bigint",
+      "pass_use_id": "bigint",
+      "offer_serve_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "PassUseOfferServeArchive": {
+    "columns": {
+      "id": "bigint",
+      "pass_use_id": "bigint",
+      "offer_serve_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "PassUseOfferServe_CA": {
+    "columns": {
+      "id": "bigint",
+      "pass_use_id": "bigint",
+      "offer_serve_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "PassUse_CA": {
+    "columns": {
+      "id": "bigint",
+      "ip_address": "varchar",
+      "lat": "varchar",
+      "lon": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_used": "datetime",
+      "total_amount": "int",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "expiration_time": "datetime",
+      "pass_set_id": "bigint",
+      "pass_event_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "notes": "longtext",
+      "device_app_installation_id": "bigint",
+      "device_id": "varchar",
+      "vehicle_id": "varchar",
+      "route_id": "varchar",
+      "block_id": "varchar",
+      "result_type": "int",
+      "pass_exception_id": "bigint"
+    }
+  },
+  "Pass_CA": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "authorized": "bit",
+      "expiration_time": "datetime",
+      "first_activation_time": "datetime",
+      "serial": "varchar",
+      "short_serial": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "customer_id": "bigint",
+      "locked_to_device_app_install_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "inventory_item_id": "bigint",
+      "issuer_id": "bigint",
+      "label_id": "bigint",
+      "merchant_id": "bigint",
+      "order_item_id": "bigint",
+      "subscriber_id": "bigint",
+      "product_id": "bigint",
+      "client_id": "bigint",
+      "nyww_legacy_pass_id": "int",
+      "nyww_legacy_user_id": "int",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_fare_id": "varchar",
+      "nyww_legacy_purchased_price": "int",
+      "nyww_legacy_multipass_uuid": "varchar",
+      "statement_item_id": "bigint",
+      "locked_for_status_using": "bit",
+      "locked_to_device_id": "bigint",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "locked_to_device_expiration_time": "datetime",
+      "pass_issue_type": "int"
+    }
+  },
+  "PassesProcessed": {
+    "columns": {
+      "id": "bigint",
+      "pass_id": "bigint",
+      "is_farecap_processed": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_pass_processed": "bit"
+    }
+  },
+  "PassesProcessedArchive": {
+    "columns": {
+      "id": "bigint",
+      "pass_id": "bigint",
+      "is_farecap_processed": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_pass_processed": "bit"
+    }
+  },
+  "Password": {
+    "columns": {
+      "id": "bigint",
+      "hashed_password": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "user_id": "bigint",
+      "hash_type": "varchar",
+      "nyww_legacy_user_id": "bigint"
+    }
+  },
+  "Payment": {
+    "columns": {
+      "id": "bigint",
+      "amount": "int",
+      "card_type": "int",
+      "card_type_name": "varchar",
+      "card_uuid": "varchar",
+      "gateway_activity_uuid": "varchar",
+      "ip_address": "varchar",
+      "last_four": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "ad_hoc_address_id": "bigint",
+      "address_id": "bigint",
+      "merchant_account_id": "bigint",
+      "order_id": "bigint",
+      "receiver_id": "bigint",
+      "sender_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "nyww_legacy_number_of_tickets": "int",
+      "authorization_code": "varchar",
+      "statement_id": "bigint",
+      "payment_order_reference": "varchar",
+      "bulk_order_id": "bigint"
+    }
+  },
+  "PaymentDetail": {
+    "columns": {
+      "id": "bigint",
+      "payment_id": "bigint",
+      "card_nickname": "varchar"
+    }
+  },
+  "PaymentDetail_CA": {
+    "columns": {
+      "id": "bigint",
+      "payment_id": "bigint",
+      "card_nickname": "varchar"
+    }
+  },
+  "Payment_CA": {
+    "columns": {
+      "id": "bigint",
+      "amount": "int",
+      "card_type": "int",
+      "card_type_name": "varchar",
+      "card_uuid": "varchar",
+      "gateway_activity_uuid": "varchar",
+      "ip_address": "varchar",
+      "last_four": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user_agent": "varchar",
+      "uuid": "varchar",
+      "ad_hoc_address_id": "bigint",
+      "address_id": "bigint",
+      "merchant_account_id": "bigint",
+      "order_id": "bigint",
+      "receiver_id": "bigint",
+      "sender_id": "bigint",
+      "nyww_legacy_transaction_entry_id": "int",
+      "nyww_legacy_customer_id": "int",
+      "nyww_legacy_number_of_tickets": "int",
+      "authorization_code": "varchar",
+      "statement_id": "bigint",
+      "payment_order_reference": "varchar",
+      "bulk_order_id": "bigint"
+    }
+  },
+  "Permission": {
+    "columns": {
+      "id": "bigint",
+      "allow": "bit",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "action_id": "bigint",
+      "client_user_id": "bigint",
+      "relation_type_id": "bigint",
+      "relation_type_organization_domain_id": "bigint"
+    }
+  },
+  "PermissionAction": {
+    "columns": {
+      "id": "bigint",
+      "controller": "varchar",
+      "description": "tinytext",
+      "keyname": "varchar",
+      "lft": "int",
+      "method": "varchar",
+      "name": "varchar",
+      "rght": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "parent_id": "bigint",
+      "request": "varchar",
+      "default_set": "bit"
+    }
+  },
+  "PermissionRole": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Person": {
+    "columns": {
+      "id": "bigint",
+      "date_of_birth": "varchar",
+      "date_of_birth_hashed": "varchar",
+      "drivers_license": "varchar",
+      "drivers_license_hashed": "varchar",
+      "ethnicity": "varchar",
+      "ethnicity_hashed": "varchar",
+      "first_name": "varchar",
+      "first_name_hashed": "varchar",
+      "gender": "varchar",
+      "gender_hashed": "varchar",
+      "last_name": "varchar",
+      "last_name_hashed": "varchar",
+      "middle_name": "varchar",
+      "middle_name_hashed": "varchar",
+      "notes": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "user": "tinyblob",
+      "uuid": "varchar",
+      "drivers_license_swiped_time": "datetime",
+      "phone": "varchar",
+      "phone_hashed": "varchar",
+      "email_id": "varchar",
+      "email_id_hashed": "varchar",
+      "eye_color": "varchar",
+      "eye_color_hashed": "varchar",
+      "hair_color": "varchar",
+      "hair_color_hashed": "varchar",
+      "height": "varchar",
+      "height_hashed": "varchar"
+    }
+  },
+  "PersonalIdentificationNumber": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "hash_pin": "varchar",
+      "hash_type": "varchar",
+      "organization_id": "bigint",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Platform": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar"
+    }
+  },
+  "PreUpdateState_test": {
+    "columns": {
+      "product_uuid": "varchar",
+      "email": "varchar",
+      "label_id": "bigint",
+      "label_name": "varchar",
+      "parent_label_id": "bigint",
+      "parent_label_name": "varchar"
+    }
+  },
+  "PresignedUrlRequestAudit": {
+    "columns": {
+      "id": "bigint",
+      "access_token_id": "bigint",
+      "contract_id": "bigint",
+      "product_id": "bigint",
+      "price_adjustment_id": "bigint",
+      "file_identifier": "varchar",
+      "presigned_s3_url": "varchar",
+      "request_url": "varchar",
+      "program_type": "varchar",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "trace_no": "varchar",
+      "error_description": "int"
+    }
+  },
+  "PriceAdjustment": {
+    "columns": {
+      "id": "bigint",
+      "adjusted_price": "int",
+      "adjustment_description": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "contract_id": "bigint",
+      "product_id": "bigint",
+      "reselling_organization_id": "bigint",
+      "list_price": "int",
+      "adjusted_price_percentage": "float",
+      "percentage_adjustment": "bit",
+      "statement_trigger": "int",
+      "offer_config_id": "bigint",
+      "program_type": "varchar"
+    }
+  },
+  "PriorityUserAccount": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "email": "varchar",
+      "time_created": "datetime"
+    }
+  },
+  "Product": {
+    "columns": {
+      "id": "bigint",
+      "alert_message": "text",
+      "cost_price": "int",
+      "list_price": "int",
+      "published": "bit",
+      "sale_price": "int",
+      "shipping_enabled": "bit",
+      "status": "int",
+      "migration_status": "int",
+      "sub_type": "int",
+      "time_modified": "datetime",
+      "time_created": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "vouchers_enabled": "bit",
+      "category_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "label_id": "bigint",
+      "organization_id": "bigint",
+      "copies_to_make": "int",
+      "digital_counterpart_id": "bigint",
+      "fare_id": "varchar",
+      "subscription_notification_trigger_id": "bigint",
+      "subscription_execution_trigger_id": "bigint",
+      "subscription_allowed": "bit",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "requires_enabler": "bit",
+      "allowed_uses": "int",
+      "buffer_capacity": "int",
+      "alternate_designator": "varchar",
+      "lock_to_device_for_day": "bit",
+      "absolute_expiration_rule_id": "bigint",
+      "weight": "int",
+      "max_product_events": "int",
+      "requires_id_check": "bit",
+      "requires_name_check": "bit",
+      "description": "varchar",
+      "third_party_identifier": "varchar",
+      "requires_user_photo_check": "bit",
+      "product_code": "varchar",
+      "theme_id": "int",
+      "short_description": "varchar",
+      "product_image_path": "longtext",
+      "auto_activate_pass": "tinyint",
+      "description_translation_id": "int",
+      "short_description_translation_id": "int",
+      "alert_message_translation_id": "int",
+      "repurchase_enabled": "tinyint",
+      "pass_activation_ranking": "int"
+    }
+  },
+  "ProductAttributeKey": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "is_primary": "bit"
+    }
+  },
+  "ProductAttributeLink": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "reference_key_id": "bigint",
+      "reference_value_id": "bigint",
+      "result_key_id": "bigint",
+      "result_value_id": "bigint"
+    }
+  },
+  "ProductAttributeValue": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "value": "varchar",
+      "key_id": "bigint"
+    }
+  },
+  "ProductBarcodeSpecs": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "barcode_id": "int",
+      "product_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductCategory": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "category_id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductConfig": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "config_key_value_id": "bigint"
+    }
+  },
+  "ProductElgibleTransferProducts": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "transfer_product_id": "bigint",
+      "transfer_event_id": "bigint",
+      "uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductEntry": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "entry_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "physical_counterpart_uuid": "varchar"
+    }
+  },
+  "ProductEvent": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "weight": "int",
+      "duration_rule_id": "bigint",
+      "event_id": "bigint",
+      "product_id": "bigint",
+      "default_for_event": "bit",
+      "specification_calendar_id": "bigint"
+    }
+  },
+  "ProductFeature": {
+    "columns": {
+      "id": "bigint",
+      "product_id": "bigint",
+      "is_transfer_feature_eligible": "tinyint",
+      "is_transfer_product": "tinyint",
+      "uuid": "varchar",
+      "status": "int",
+      "transfer_duration_rule_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "feature_1": "varchar",
+      "feature_2": "varchar",
+      "feature_3": "varchar",
+      "feature_4": "varchar",
+      "feature_5": "varchar",
+      "feature_6": "varchar"
+    }
+  },
+  "ProductGroup": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "absolute_expiration_rule_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "organization_id": "bigint",
+      "default_for_event": "bit",
+      "duration_rule_id": "bigint",
+      "weight": "int",
+      "event_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "ProductGroupBatchEmail": {
+    "columns": {
+      "id": "bigint",
+      "action": "varchar",
+      "email": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_group_id": "bigint",
+      "emails": "longtext",
+      "expirations": "longtext"
+    }
+  },
+  "ProductGroupEmailAddress": {
+    "columns": {
+      "id": "bigint",
+      "email": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_group_id": "bigint",
+      "expiration_time": "datetime"
+    }
+  },
+  "ProductGroupProduct": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "product_group_id": "bigint"
+    }
+  },
+  "ProductGroupUser": {
+    "columns": {
+      "id": "bigint",
+      "expiration_time": "datetime",
+      "first_use": "datetime",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uses": "int",
+      "uuid": "varchar",
+      "product_group_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "ProductHistory": {
+    "columns": {
+      "id": "bigint",
+      "alert_message": "text",
+      "cost_price": "int",
+      "list_price": "int",
+      "published": "bit",
+      "sale_price": "int",
+      "shipping_enabled": "bit",
+      "status": "int",
+      "sub_type": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "vouchers_enabled": "bit",
+      "category_id": "bigint",
+      "expiration_rule_id": "bigint",
+      "label_id": "bigint",
+      "organization_id": "bigint",
+      "copies_to_make": "int",
+      "digital_counterpart_id": "bigint",
+      "fare_id": "varchar",
+      "subscription_notification_trigger_id": "bigint",
+      "subscription_execution_trigger_id": "bigint",
+      "subscription_allowed": "bit",
+      "locked_to_device_expiration_rule_id": "bigint",
+      "requires_enabler": "bit",
+      "allowed_uses": "int",
+      "buffer_capacity": "int",
+      "alternate_designator": "varchar",
+      "lock_to_device_for_day": "bit",
+      "absolute_expiration_rule_id": "bigint",
+      "weight": "int",
+      "max_product_events": "int",
+      "requires_id_check": "bit",
+      "requires_name_check": "bit",
+      "description": "varchar",
+      "third_party_identifier": "varchar",
+      "requires_user_photo_check": "bit",
+      "product_code": "varchar",
+      "end_date": "datetime",
+      "producthistory_sid": "int"
+    }
+  },
+  "ProductHistoryStaging": {
+    "columns": {
+      "id": "bigint",
+      "copies_to_make": "int",
+      "time_modified": "datetime",
+      "list_price": "int"
+    }
+  },
+  "ProductInterAgencyTransferOrg": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "org_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductMigration": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "request": "mediumtext",
+      "response": "mediumtext",
+      "organization_id": "bigint",
+      "access_token_id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductPackage": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "package_product_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "ProductRelation": {
+    "columns": {
+      "id": "bigint",
+      "type": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "related_product_id": "bigint",
+      "price_adjustment_id": "bigint"
+    }
+  },
+  "ProductRequiredUserPhotoStatus": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "product_id": "bigint"
+    }
+  },
+  "ProductRiderTypeRelation": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "rider_type_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "ProductTransferRule": {
+    "columns": {
+      "id": "bigint",
+      "allowed_uses": "int",
+      "same_route_transfer": "tinyint",
+      "product_id": "bigint",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductVariant": {
+    "columns": {
+      "id": "int",
+      "base_product_id": "int",
+      "cost_price": "int",
+      "list_price": "int",
+      "sale_price": "int",
+      "sku": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "status": "int",
+      "uuid": "varchar",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "is_processed": "tinyint",
+      "list_priority": "int"
+    }
+  },
+  "ProductVariantAttribute": {
+    "columns": {
+      "id": "int",
+      "product_variant_id": "int",
+      "attribute_key_id": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductVariantEntry": {
+    "columns": {
+      "id": "int",
+      "entry_id": "int",
+      "max_number_of_uses": "int",
+      "product_variant_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "ProductVariantLegacyProduct": {
+    "columns": {
+      "id": "int",
+      "product_variant_id": "int",
+      "legacy_product_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "ProductVariantProductAttribute": {
+    "columns": {
+      "id": "int",
+      "product_variant_id": "int",
+      "base_product_attribute_id": "int",
+      "attribute_value_id": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ProductVisibility": {
+    "columns": {
+      "id": "bigint",
+      "minimum_version": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "client_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "Product_OTF": {
+    "columns": {
+      "id": "double",
+      "alert_message": "text",
+      "cost_price": "double",
+      "list_price": "double",
+      "published": "double",
+      "sale_price": "double",
+      "shipping_enabled": "double",
+      "status": "double",
+      "sub_type": "double",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "double",
+      "uuid": "tinytext",
+      "vouchers_enabled": "double",
+      "category_id": "tinytext",
+      "expiration_rule_id": "tinytext",
+      "label_id": "double",
+      "organization_id": "double",
+      "copies_to_make": "double",
+      "digital_counterpart_id": "tinytext",
+      "fare_id": "tinytext",
+      "subscription_notification_trigger_id": "tinytext",
+      "subscription_execution_trigger_id": "tinytext",
+      "subscription_allowed": "double",
+      "locked_to_device_expiration_rule_id": "tinytext",
+      "requires_enabler": "double",
+      "allowed_uses": "double",
+      "buffer_capacity": "double",
+      "alternate_designator": "tinytext",
+      "lock_to_device_for_day": "double",
+      "absolute_expiration_rule_id": "double",
+      "weight": "double",
+      "max_product_events": "tinytext",
+      "requires_id_check": "double",
+      "requires_name_check": "double",
+      "description": "tinytext",
+      "third_party_identifier": "tinytext",
+      "requires_user_photo_check": "double",
+      "product_code": "tinytext",
+      "end_date": "datetime"
+    }
+  },
+  "Product_Product": {
+    "columns": {
+      "Product_id": "bigint",
+      "enablers_id": "bigint"
+    }
+  },
+  "ProtectedAddress": {
+    "columns": {
+      "id": "bigint",
+      "address_1": "varchar",
+      "address_1_hashed": "varchar",
+      "address_2": "varchar",
+      "address_2_hashed": "varchar",
+      "city": "varchar",
+      "city_hashed": "varchar",
+      "postal_code": "varchar",
+      "postal_code_hashed": "varchar",
+      "street": "varchar",
+      "street_hashed": "varchar",
+      "street_number": "varchar",
+      "street_number_hashed": "varchar",
+      "territory": "varchar",
+      "territory_hashed": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "unit": "varchar",
+      "unit_hashed": "varchar",
+      "uuid": "varchar",
+      "owner_id": "bigint"
+    }
+  },
+  "ProximityKey": {
+    "columns": {
+      "id": "bigint",
+      "private_key": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_valid_from": "datetime",
+      "time_valid_to": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "PushNotificationLog": {
+    "columns": {
+      "id": "int",
+      "push_notification_queue_id": "int",
+      "device_app_installation_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "PushNotificationQueue": {
+    "columns": {
+      "id": "int",
+      "notification_id": "int",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ReasonCode": {
+    "columns": {
+      "id": "bigint",
+      "description": "varchar",
+      "title": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "weight": "int",
+      "organization_id": "bigint"
+    }
+  },
+  "ReceiveStock": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "current_user_id": "bigint",
+      "organization_id": "bigint"
+    }
+  },
+  "RefreshTokenMapping": {
+    "columns": {
+      "id": "bigint",
+      "accesstoken_mapping_id": "bigint",
+      "refresh_jwt_token": "text",
+      "status_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Region": {
+    "columns": {
+      "id": "bigint",
+      "code": "varchar",
+      "lft": "int",
+      "name": "varchar",
+      "rght": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Relation": {
+    "columns": {
+      "id": "bigint",
+      "recursive": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "inverse_id": "bigint",
+      "related_user_id": "bigint",
+      "type_id": "bigint",
+      "user_id": "bigint",
+      "reference_num": "varchar"
+    }
+  },
+  "RelationType": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "keyname": "varchar",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "reciprocal_id": "bigint",
+      "organization_admin": "bit",
+      "type": "int",
+      "external_type": "int"
+    }
+  },
+  "RiderType": {
+    "columns": {
+      "id": "bigint",
+      "name": "varchar",
+      "organization_id": "int",
+      "uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "is_default": "tinyint",
+      "expiration_rule_mapping_config_id": "bigint"
+    }
+  },
+  "Route": {
+    "columns": {
+      "id": "int",
+      "organization_id": "int",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "route_id": "varchar"
+    }
+  },
+  "RunConfig": {
+    "columns": {
+      "id": "int",
+      "gtfs_trip_id": "int",
+      "sequence_number": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "trip_id": "int",
+      "uuid": "varchar",
+      "vehicle_id": "int"
+    }
+  },
+  "ScheduledProductUpdate": {
+    "columns": {
+      "id": "bigint",
+      "request_body": "longtext",
+      "request_hash": "longtext",
+      "result": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "update_time": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "organization_id": "bigint",
+      "product_id": "bigint"
+    }
+  },
+  "Service": {
+    "columns": {
+      "id": "bigint",
+      "client_id": "varchar",
+      "client_secret": "varchar",
+      "keyname": "varchar",
+      "name": "varchar",
+      "redirect_uri": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "url": "longtext",
+      "uuid": "varchar",
+      "version": "int",
+      "related_client_id": "bigint",
+      "external_wallet_merchant_id": "bigint",
+      "image_link": "varchar"
+    }
+  },
+  "ServiceClientMapping": {
+    "columns": {
+      "id": "bigint",
+      "service_id": "bigint",
+      "related_client_id": "bigint",
+      "status_id": "bigint"
+    }
+  },
+  "ServiceUser": {
+    "columns": {
+      "id": "bigint",
+      "authorization_code": "longtext",
+      "network_page_id": "varchar",
+      "network_page_name": "varchar",
+      "network_user_id": "varchar",
+      "oauth_secret": "longtext",
+      "oauth_token": "longtext",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "username": "varchar",
+      "uuid": "varchar",
+      "service_id": "bigint",
+      "user_id": "bigint",
+      "wallet_uuid": "varchar"
+    }
+  },
+  "Service_Client": {
+    "columns": {
+      "Service_id": "bigint",
+      "related_clients_id": "bigint"
+    }
+  },
+  "Session": {
+    "columns": {
+      "id": "bigint",
+      "session_id": "char",
+      "session_cookie_name": "varchar",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ShippingMethod": {
+    "columns": {
+      "id": "bigint",
+      "cost": "int",
+      "description": "varchar",
+      "name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "Statement": {
+    "columns": {
+      "id": "bigint",
+      "delivery_method": "int",
+      "notes": "longtext",
+      "original_total": "int",
+      "override_description": "longtext",
+      "payment_type": "int",
+      "reference_number": "varchar",
+      "shipping_required": "bit",
+      "status": "int",
+      "subtotal": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_end": "datetime",
+      "time_modified": "datetime",
+      "time_paid": "datetime",
+      "time_purchased": "datetime",
+      "time_start": "datetime",
+      "total": "int",
+      "total_is_overridden": "bit",
+      "type": "int",
+      "uuid": "varchar",
+      "billing_address_id": "bigint",
+      "customer_id": "bigint",
+      "merchant_id": "bigint",
+      "shipping_address_id": "bigint",
+      "subscriber_id": "bigint",
+      "voucher_id": "bigint"
+    }
+  },
+  "StatementItem": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "name": "varchar",
+      "original_price": "int",
+      "override_description": "longtext",
+      "price": "int",
+      "price_is_overridden": "bit",
+      "removed": "bit",
+      "sku": "varchar",
+      "status": "int",
+      "tax": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "total": "int",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "statement_id": "bigint",
+      "voucher_id": "bigint",
+      "pass_exception_id": "bigint",
+      "pass_use_id": "bigint",
+      "contract_id": "bigint",
+      "time_occurred": "datetime",
+      "pass_exception_archive_id": "bigint",
+      "pass_use_archive_id": "bigint",
+      "type": "int",
+      "user_id": "bigint",
+      "pass_use_ca_id": "bigint",
+      "pass_exception_ca_id": "bigint"
+    }
+  },
+  "Status": {
+    "columns": {
+      "id": "bigint",
+      "code": "bigint",
+      "name": "varchar"
+    }
+  },
+  "Status_SEQ": {
+    "columns": {
+      "next_val": "bigint"
+    }
+  },
+  "StopTimes": {
+    "columns": {
+      "id": "int",
+      "run_config_id": "int",
+      "time_arrival": "datetime",
+      "time_created": "datetime",
+      "time_departure": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "stop_id": "int",
+      "trip_id": "varchar"
+    }
+  },
+  "StopZone": {
+    "columns": {
+      "id": "int",
+      "stop_id": "int",
+      "zone_id": "int"
+    }
+  },
+  "Stops": {
+    "columns": {
+      "id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "name_id": "int",
+      "organization_id": "int",
+      "gtfs_id": "varchar",
+      "long_name_id": "int",
+      "status": "int"
+    }
+  },
+  "StoredValueDistribution": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "access_token_id": "bigint",
+      "contract_id": "bigint",
+      "total_recipient_count": "int",
+      "error_resp": "varchar",
+      "is_recipients_queued": "tinyint"
+    }
+  },
+  "StoredValueDistributionLock": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "stored_value_distribution_id": "bigint",
+      "process_task": "varchar"
+    }
+  },
+  "StoredValueDistributionRecipient": {
+    "columns": {
+      "id": "bigint",
+      "actual_amount": "int",
+      "registered": "tinyint",
+      "original_amount": "int",
+      "stored_value_distribution_id": "bigint",
+      "user_id": "bigint",
+      "processed": "tinyint"
+    }
+  },
+  "Subscriber": {
+    "columns": {
+      "id": "bigint",
+      "email": "varchar",
+      "first_name": "varchar",
+      "full_name": "varchar",
+      "language": "varchar",
+      "last_name": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "middle_name": "varchar",
+      "mobile": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "timezone": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "mailing_address_id": "bigint",
+      "locale": "varchar"
+    }
+  },
+  "Subscription": {
+    "columns": {
+      "id": "bigint",
+      "date_end": "datetime",
+      "date_start": "datetime",
+      "status": "int",
+      "time_modified": "datetime",
+      "time_created": "datetime",
+      "uuid": "varchar",
+      "subscription_execution_trigger_id": "bigint",
+      "subscription_notification_trigger_id": "bigint",
+      "parent_order_item_id": "bigint",
+      "current_order_item_id": "bigint",
+      "execution_trigger_id": "bigint",
+      "notification_trigger_id": "bigint"
+    }
+  },
+  "SubscriptionErrorLog": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "subscription_id": "bigint",
+      "error_response": "varchar"
+    }
+  },
+  "SubscriptionTrigger": {
+    "columns": {
+      "id": "bigint",
+      "time_modified": "datetime",
+      "time_remaining_unit": "int",
+      "time_remaining_value": "int",
+      "uses_remaining": "int",
+      "uuid": "varchar",
+      "time_created": "datetime"
+    }
+  },
+  "SupportedKeys": {
+    "columns": {
+      "id": "bigint",
+      "key_type": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "status": "int"
+    }
+  },
+  "SupportedMediaTypeKey": {
+    "columns": {
+      "id": "bigint",
+      "organization_id": "int",
+      "media_type_id": "bigint",
+      "key_type": "int",
+      "json_key_name": "varchar",
+      "encryption_required": "int"
+    }
+  },
+  "TMP": {
+    "columns": {
+      "name": "varchar"
+    }
+  },
+  "TVMBEAPaymentTransaction": {
+    "columns": {
+      "id": "bigint",
+      "transaction_amount": "int",
+      "transaction_type": "int",
+      "authorization_request": "varchar",
+      "authorization_number": "varchar",
+      "authorization_code": "varchar",
+      "third_party_tvm_payment_id": "bigint"
+    }
+  },
+  "Tally": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "title": "varchar",
+      "weight": "int",
+      "organization_id": "bigint"
+    }
+  },
+  "TapOrder": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "order_id": "bigint",
+      "tap_uuid": "varchar"
+    }
+  },
+  "TestLiquibase": {
+    "columns": {
+      "id": "int",
+      "quote": "varchar",
+      "author": "varchar",
+      "author_reverse": "varchar",
+      "time_modified": "datetime"
+    }
+  },
+  "Theme": {
+    "columns": {
+      "id": "int",
+      "background_color": "varchar",
+      "primary_text_color": "varchar",
+      "accent_color": "varchar",
+      "secondary_text_color": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "int"
+    }
+  },
+  "ThirdPartyOrderInfo": {
+    "columns": {
+      "id": "int",
+      "third_party_order_identifier": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "order_id": "bigint"
+    }
+  },
+  "ThirdPartyPayment": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "payment_id": "bigint",
+      "tuid": "varchar",
+      "order_id": "bigint",
+      "merchant_number": "varchar",
+      "merchant_name": "varchar",
+      "merchant_address1": "varchar",
+      "merchant_address2": "varchar",
+      "customer_phone": "varchar",
+      "trans_name": "varchar",
+      "card_label": "varchar",
+      "last_four": "varchar",
+      "first_six": "varchar",
+      "entry_mode": "varchar",
+      "invoice_number": "varchar",
+      "clerk_number": "varchar",
+      "store_number": "varchar",
+      "trace_number": "varchar",
+      "batch_number": "varchar",
+      "base_amount": "varchar",
+      "tip_amount": "varchar",
+      "cb_amount": "varchar",
+      "sc_amount": "varchar",
+      "total_amount": "varchar",
+      "response_time": "varchar",
+      "response_date": "varchar",
+      "response_currency": "varchar",
+      "response_code": "varchar",
+      "response_text": "varchar",
+      "tid": "varchar",
+      "mid": "varchar",
+      "cvm": "varchar",
+      "aid": "varchar",
+      "iad": "varchar",
+      "tsi": "varchar",
+      "tvr": "varchar",
+      "arc": "varchar",
+      "response_authcode": "varchar",
+      "avs_result_code": "varchar",
+      "emv_tac_denial": "varchar",
+      "emv_tac_online": "varchar",
+      "emv_tac_default": "varchar",
+      "header5": "varchar",
+      "header4": "varchar",
+      "header3": "varchar",
+      "header2": "varchar",
+      "header1": "varchar",
+      "emv_panseqnum": "varchar",
+      "emv_auth_amt": "varchar",
+      "emv_app_transdata": "varchar",
+      "emv_oth_amt": "varchar",
+      "emv_unpred_num": "varchar",
+      "emv_atc": "varchar",
+      "emv_ac": "varchar",
+      "trans_language": "varchar",
+      "emv_termcode": "varchar",
+      "emv_tvr": "varchar",
+      "emv_aip": "varchar",
+      "emv_ttq": "varchar",
+      "emv_app_pan": "varchar",
+      "emv_applabel": "varchar",
+      "emv_usage_ctrl": "varchar",
+      "emv_transtype": "varchar",
+      "demo_mode": "varchar",
+      "user_defined_echo_data": "varchar",
+      "currency_exponent": "varchar",
+      "emv_iad": "varchar",
+      "emv_cvm": "varchar",
+      "emv_currencycode": "varchar",
+      "local_time": "varchar",
+      "emv_cid": "varchar",
+      "localdate": "varchar",
+      "order_number": "varchar",
+      "app_version": "varchar",
+      "transref": "varchar",
+      "payment_type": "varchar",
+      "expirydate": "varchar",
+      "card_holder_name": "varchar",
+      "sequencenum": "varchar",
+      "track2": "varchar",
+      "resultcode": "varchar",
+      "emv_transdate": "varchar",
+      "issuername": "varchar"
+    }
+  },
+  "ThirdPartyPayment_CA": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "payment_id": "bigint",
+      "tuid": "varchar",
+      "order_id": "bigint",
+      "merchant_number": "varchar",
+      "merchant_name": "varchar",
+      "merchant_address1": "varchar",
+      "merchant_address2": "varchar",
+      "customer_phone": "varchar",
+      "trans_name": "varchar",
+      "card_label": "varchar",
+      "last_four": "varchar",
+      "first_six": "varchar",
+      "entry_mode": "varchar",
+      "invoice_number": "varchar",
+      "clerk_number": "varchar",
+      "store_number": "varchar",
+      "trace_number": "varchar",
+      "batch_number": "varchar",
+      "base_amount": "varchar",
+      "tip_amount": "varchar",
+      "cb_amount": "varchar",
+      "sc_amount": "varchar",
+      "total_amount": "varchar",
+      "response_time": "varchar",
+      "response_date": "varchar",
+      "response_currency": "varchar",
+      "response_code": "varchar",
+      "response_text": "varchar",
+      "tid": "varchar",
+      "mid": "varchar",
+      "cvm": "varchar",
+      "aid": "varchar",
+      "iad": "varchar",
+      "tsi": "varchar",
+      "tvr": "varchar",
+      "arc": "varchar",
+      "response_authcode": "varchar"
+    }
+  },
+  "ThirdPartyTVMBEAPayment": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "tvm_reference_number": "varchar",
+      "source": "varchar",
+      "payment_status": "varchar",
+      "payment_timestamp": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "payment_id": "bigint"
+    }
+  },
+  "ThirdPartyUser": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "organization_id": "int"
+    }
+  },
+  "TicketScreenType": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "name": "varchar",
+      "status": "int"
+    }
+  },
+  "Token": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "token": "varchar",
+      "uuid": "varchar",
+      "user_id": "bigint",
+      "type": "int",
+      "client_id": "bigint",
+      "organization_id": "int"
+    }
+  },
+  "Transfer": {
+    "columns": {
+      "id": "bigint",
+      "complete": "bit",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "from_inventory_id": "bigint",
+      "initiator_id": "bigint",
+      "receiver_id": "bigint",
+      "to_inventory_id": "bigint",
+      "num_unreceived": "int",
+      "cancelled": "bit",
+      "contract_id": "bigint"
+    }
+  },
+  "TransitStore": {
+    "columns": {
+      "id": "int",
+      "organization_id": "bigint",
+      "transit_store_email": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "status": "int"
+    }
+  },
+  "Translation": {
+    "columns": {
+      "id": "bigint",
+      "country": "varchar",
+      "language": "varchar",
+      "target_uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "value": "text"
+    }
+  },
+  "TranslationText": {
+    "columns": {
+      "id": "int",
+      "translation_id": "int",
+      "locale_id": "int",
+      "language_code": "varchar",
+      "text": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "TranslationV2": {
+    "columns": {
+      "id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "Trip": {
+    "columns": {
+      "id": "int",
+      "direction": "varchar",
+      "route_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "trip_id": "varchar"
+    }
+  },
+  "TripConfig": {
+    "columns": {
+      "id": "int",
+      "sequence_number": "int",
+      "stop_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "trip_id": "int",
+      "uuid": "varchar"
+    }
+  },
+  "TypeEntity": {
+    "columns": {
+      "id": "bigint",
+      "uuid": "varchar",
+      "sub_type": "varchar",
+      "key_name": "varchar",
+      "key_value": "int",
+      "status": "int"
+    }
+  },
+  "UpdateTracker": {
+    "columns": {
+      "reference_number": "varchar",
+      "update_type": "varchar",
+      "time_updated": "datetime"
+    }
+  },
+  "UseScreenVisualValidation": {
+    "columns": {
+      "id": "int",
+      "uuid": "varchar",
+      "background_primary_colour": "varchar",
+      "background_secondary_colour": "varchar",
+      "glow_primary_colour": "varchar",
+      "glow_secondary_colour": "varchar",
+      "status": "int",
+      "organization_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserAccount": {
+    "columns": {
+      "id": "bigint",
+      "class_type": "int",
+      "default_credit_card_uuid": "varchar",
+      "email": "varchar",
+      "email_confirmed": "bit",
+      "first_name": "varchar",
+      "full_name": "varchar",
+      "image_path": "longtext",
+      "keys_generated": "bit",
+      "language": "varchar",
+      "last_login_time": "datetime",
+      "last_name": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "middle_name": "varchar",
+      "mobile": "varchar",
+      "short_name": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "timezone": "varchar",
+      "total_logins": "int",
+      "type": "int",
+      "url": "longtext",
+      "username": "varchar",
+      "uuid": "varchar",
+      "default_billing_address_id": "bigint",
+      "default_shipping_address_id": "bigint",
+      "password_id": "bigint",
+      "role_id": "bigint",
+      "nyww_legacy_user_id": "bigint",
+      "terms_accepted": "bit",
+      "time_terms_accepted": "datetime",
+      "terms_accepted_version": "varchar",
+      "locale": "varchar",
+      "email_v2": "varchar"
+    }
+  },
+  "UserAccountData": {
+    "columns": {
+      "id": "int",
+      "user_id": "bigint",
+      "source_client_id": "bigint",
+      "emailv2": "varchar",
+      "company_name": "varchar",
+      "date_of_birth": "varchar",
+      "gender": "varchar",
+      "race": "varchar",
+      "occupation": "varchar",
+      "locale_v2": "varchar"
+    }
+  },
+  "UserAdditionalInfo": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "organization_id": "int",
+      "key": "varchar",
+      "value": "varchar",
+      "status": "int",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserDefaultPayment": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "is_selected": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserDefinedData": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "user_defined_data": "mediumtext",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserLegalAgreement": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "time_accepted": "datetime",
+      "legal_agreement_id": "bigint",
+      "user_id": "bigint"
+    }
+  },
+  "UserLog": {
+    "columns": {
+      "id": "bigint",
+      "last_login": "datetime",
+      "os_id": "varchar",
+      "os_version": "varchar",
+      "user_uuid": "varchar"
+    }
+  },
+  "UserOrganizationConfiguration": {
+    "columns": {
+      "id": "bigint",
+      "config_key_value_id": "bigint",
+      "organization_id": "int",
+      "user_id": "bigint"
+    }
+  },
+  "UserPhoto": {
+    "columns": {
+      "id": "bigint",
+      "data": "longtext",
+      "user_id": "bigint",
+      "organization_id": "bigint",
+      "uuid": "varchar",
+      "is_active": "tinyint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserPhotoStatus": {
+    "columns": {
+      "id": "bigint",
+      "user_photo_id": "bigint",
+      "status": "int",
+      "version": "int",
+      "reviewer_id": "bigint",
+      "uuid": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "UserRiderTypeRelation": {
+    "columns": {
+      "id": "bigint",
+      "user_id": "bigint",
+      "rider_type_id": "bigint",
+      "uuid": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "ValidationRule": {
+    "columns": {
+      "id": "bigint",
+      "lock_time_span": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "Validator": {
+    "columns": {
+      "id": "bigint",
+      "hardware_address": "varchar",
+      "network_address": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "parent_vehicle_id": "bigint",
+      "identifier": "varchar",
+      "venue_id": "bigint"
+    }
+  },
+  "ValidatorActivity": {
+    "columns": {
+      "id": "bigint",
+      "data": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_recorded": "datetime",
+      "uuid": "varchar",
+      "parent_validator_id": "bigint",
+      "type": "int"
+    }
+  },
+  "ValidatorActivityArchive": {
+    "columns": {
+      "archive_id": "int",
+      "id": "bigint",
+      "data": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_recorded": "datetime",
+      "uuid": "varchar",
+      "parent_validator_id": "bigint",
+      "type": "int",
+      "timestamp": "datetime"
+    }
+  },
+  "Vehicle": {
+    "columns": {
+      "id": "bigint",
+      "identifier": "varchar",
+      "network_address": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "VehicleActivity": {
+    "columns": {
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "id": "bigint",
+      "time_recorded": "datetime",
+      "data": "longtext",
+      "uuid": "varchar",
+      "parent_vehicle_id": "bigint",
+      "type": "int"
+    }
+  },
+  "VehicleActivityArchive": {
+    "columns": {
+      "archive_id": "int",
+      "id": "bigint",
+      "data": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "time_recorded": "datetime",
+      "uuid": "varchar",
+      "parent_vehicle_id": "bigint",
+      "type": "int",
+      "timestamp": "datetime"
+    }
+  },
+  "VehicleType": {
+    "columns": {
+      "id": "smallint",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "VehicleV2": {
+    "columns": {
+      "id": "int",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "number": "varchar",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type_id": "smallint",
+      "uuid": "varchar"
+    }
+  },
+  "Venue": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "foreign_class": "varchar",
+      "foreign_id": "varchar",
+      "lat": "decimal",
+      "lon": "decimal",
+      "name": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "timezone": "varchar",
+      "type": "int",
+      "url": "varchar",
+      "uuid": "varchar",
+      "category_id": "bigint",
+      "owner_org_id": "bigint",
+      "organization_id": "bigint",
+      "address_id": "bigint",
+      "status": "int",
+      "lft": "int",
+      "rght": "int",
+      "parent_id": "bigint",
+      "slug": "varchar",
+      "stop_id": "varchar",
+      "long_name": "varchar"
+    }
+  },
+  "Version": {
+    "columns": {
+      "id": "bigint",
+      "version_number": "varchar",
+      "platform_id": "bigint"
+    }
+  },
+  "VisualPassSpecification": {
+    "columns": {
+      "id": "bigint",
+      "time_created": "datetime",
+      "time_end": "datetime",
+      "time_modified": "datetime",
+      "time_start": "datetime",
+      "uuid": "varchar",
+      "event_id": "bigint",
+      "name": "varchar",
+      "specification_calendar_id": "bigint",
+      "template_id": "bigint",
+      "code": "varchar"
+    }
+  },
+  "VisualPassSpecificationAnimationImage": {
+    "columns": {
+      "id": "bigint",
+      "base_64_encoded_image": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "VisualPassSpecificationAttribute": {
+    "columns": {
+      "id": "bigint",
+      "attribute_key": "varchar",
+      "attribute_value": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "visual_pass_specification_id": "bigint"
+    }
+  },
+  "VisualPassSpecificationCalendar": {
+    "columns": {
+      "id": "bigint",
+      "description": "varchar",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "v3_cache_time_limit": "int"
+    }
+  },
+  "VisualPassSpecification_VisualPassSpecificationAnimationImage": {
+    "columns": {
+      "VisualPassSpecification_id": "bigint",
+      "animation_images_id": "bigint"
+    }
+  },
+  "VisualPassSpecification_animation_directions": {
+    "columns": {
+      "VisualPassSpecification_id": "bigint",
+      "animation_directions": "int"
+    }
+  },
+  "VisualPassSpecification_colors": {
+    "columns": {
+      "VisualPassSpecification_id": "bigint",
+      "colors": "varchar"
+    }
+  },
+  "VisualPassSpecification_text_color": {
+    "columns": {
+      "id": "bigint",
+      "color": "varchar",
+      "display_section": "varchar",
+      "visualpass_spec_id": "bigint"
+    }
+  },
+  "VisualPassTemplate": {
+    "columns": {
+      "id": "bigint",
+      "description": "longtext",
+      "html_source": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "title": "varchar",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "version": "varchar",
+      "preactivation_required": "tinyint"
+    }
+  },
+  "VisualPassTemplateRequiredLibraries": {
+    "columns": {
+      "id": "bigint",
+      "template_id": "bigint",
+      "library_id": "bigint",
+      "weight": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "VisualPassTemplateSourceLibrary": {
+    "columns": {
+      "id": "bigint",
+      "filename": "varchar",
+      "source": "longtext",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "url": "varchar",
+      "uuid": "varchar"
+    }
+  },
+  "VisualPassTemplate_VisualPassTemplateSourceLibrary": {
+    "columns": {
+      "VisualPassTemplate_id": "bigint",
+      "js_libraries_id": "bigint"
+    }
+  },
+  "Voucher": {
+    "columns": {
+      "id": "bigint",
+      "code": "varchar",
+      "expiration_date": "datetime",
+      "status": "int",
+      "third_party_code": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "product_id": "bigint",
+      "redeemer_id": "bigint",
+      "redeemer_organization_id": "bigint",
+      "seller_organization_id": "bigint",
+      "source_organization_id": "bigint",
+      "statement_item_id": "bigint"
+    }
+  },
+  "VoucherCode": {
+    "columns": {
+      "id": "int",
+      "voucher_code": "varchar",
+      "tvm_id": "varchar",
+      "uuid": "varchar",
+      "status": "int",
+      "organization_id": "int",
+      "expiration_time": "datetime",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "WalletActivityMapping": {
+    "columns": {
+      "id": "bigint",
+      "payment_id": "bigint",
+      "order_item_id": "bigint",
+      "wallet_activity_log_uuid": "varchar",
+      "wallet_uuid": "varchar",
+      "activity_type": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "Zone": {
+    "columns": {
+      "id": "int",
+      "long_description_id": "int",
+      "long_name_id": "int",
+      "short_description_id": "int",
+      "short_name_id": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar"
+    }
+  },
+  "beacon_region": {
+    "columns": {
+      "id": "int",
+      "identifier": "varchar",
+      "majorvalue": "int",
+      "minorvalue": "int",
+      "proximitythreshold": "int",
+      "proximityuuid": "varchar",
+      "upd_dt": "varchar",
+      "upd_usr": "varchar",
+      "region_id": "int"
+    }
+  },
+  "e_nightly_ca_errors": {
+    "columns": {
+      "id": "bigint",
+      "error_code": "varchar",
+      "eror_message": "text",
+      "time_created": "datetime"
+    }
+  },
+  "e_nightly_errors": {
+    "columns": {
+      "id": "bigint",
+      "error_code": "varchar",
+      "eror_message": "text",
+      "time_created": "datetime"
+    }
+  },
+  "geographic_region": {
+    "columns": {
+      "id": "int",
+      "identifier": "varchar",
+      "latitude": "double",
+      "longitude": "double",
+      "radius": "int",
+      "upd_dt": "varchar",
+      "upd_usr": "varchar",
+      "region_id": "int"
+    }
+  },
+  "offercode_errors": {
+    "columns": {
+      "id": "bigint",
+      "error_code": "varchar",
+      "eror_message": "text",
+      "time_created": "datetime"
+    }
+  },
+  "organizations": {
+    "columns": {
+      "id": "int",
+      "agency_id": "varchar",
+      "long_name_id": "int",
+      "org_slug": "varchar",
+      "short_name_id": "int",
+      "user_account_id": "int",
+      "uuid": "varchar"
+    }
+  },
+  "overture_dm_scripts": {
+    "columns": {
+      "id": "int",
+      "domain": "varchar",
+      "environment": "varchar",
+      "database_name": "varchar",
+      "filename": "varchar",
+      "absolute_filename": "varchar",
+      "file_hash": "varchar",
+      "time_run": "datetime",
+      "result": "longtext"
+    }
+  },
+  "pass_sequence": {
+    "columns": {
+      "id": "bigint",
+      "last_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime"
+    }
+  },
+  "play_evolutions": {
+    "columns": {
+      "id": "int",
+      "hash": "varchar",
+      "applied_at": "timestamp",
+      "apply_script": "text",
+      "revert_script": "text",
+      "state": "varchar",
+      "last_problem": "text",
+      "module_key": "varchar"
+    }
+  },
+  "region": {
+    "columns": {
+      "id": "int",
+      "name": "varchar",
+      "regionmanifest_id": "int"
+    }
+  },
+  "region_event": {
+    "columns": {
+      "id": "int",
+      "beaconproximity": "int",
+      "beaconproximityuuid": "varchar",
+      "beaconrssi": "int",
+      "beaconrssiaccuracy": "decimal",
+      "isinregion": "varchar",
+      "ismonitorringregion": "varchar",
+      "latitude": "decimal",
+      "locationaccuracy": "decimal",
+      "longitude": "decimal",
+      "majorvalue": "int",
+      "minorvalue": "int",
+      "regionidentifier": "varchar",
+      "timestamp": "varchar",
+      "type": "int",
+      "uuid": "varchar",
+      "regioneventbatch_id": "int"
+    }
+  },
+  "region_event_batch": {
+    "columns": {
+      "id": "int",
+      "txtime": "varchar",
+      "version": "int"
+    }
+  },
+  "region_event_errors": {
+    "columns": {
+      "region_event_id": "int",
+      "errors_id": "int"
+    }
+  },
+  "region_manifest": {
+    "columns": {
+      "id": "int",
+      "servertime": "varchar",
+      "version": "int",
+      "organization_id": "int"
+    }
+  },
+  "test1": {
+    "columns": {
+      "id": "bigint",
+      "status": "int",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "uuid": "varchar",
+      "related_merchant_id": "bigint",
+      "realted_name": "bigint",
+      "merchant_id": "bigint"
+    }
+  },
+  "test637": {
+    "columns": {
+      "id": "bigint",
+      "user_email": "varchar",
+      "user_name": "varchar",
+      "product_uuid": "varchar",
+      "partner_uuid": "varchar",
+      "partner_program_contract_uuid": "varchar",
+      "user_status": "int",
+      "is_latest": "tinyint",
+      "processing_type": "int",
+      "uuid": "varchar",
+      "organization_id": "bigint",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "end_date": "datetime",
+      "batch_status": "varchar"
+    }
+  },
+  "test_ve": {
+    "columns": {
+      "id": "bigint",
+      "identifier": "varchar",
+      "network_address": "varchar",
+      "time_created": "datetime",
+      "time_modified": "datetime",
+      "type": "int",
+      "uuid": "varchar",
+      "organization_id": "bigint"
+    }
+  },
+  "update_date_time": {
+    "columns": {
+      "id": "int"
+    }
+  },
+  "update_user": {
+    "columns": {
+      "id": "int"
+    }
+  },
+  "vs_error": {
+    "columns": {
+      "id": "int",
+      "code": "int"
+    }
+  }
+}

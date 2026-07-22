@@ -1,4 +1,5 @@
 import os
+import json
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -19,7 +20,28 @@ print("API key loaded successfully.")
 client = OpenAI(api_key=api_key)
 print("OpenAI client ready.")
 
-def review_sql_with_llm(sql):
+def format_schema(schema):
+    if not schema:
+        return "No schema provided."
+
+    return json.dumps(schema, indent=2)
+
+def format_list(items):
+    if not items:
+        return "None"
+    return ", ".join(items)
+
+def format_findings(findings):
+    if not findings:
+        return "No local findings available."
+
+    return json.dumps(findings, indent=2)
+
+def review_sql_with_llm(sql, schema=None, extracted_tables=None, extracted_columns=None, existing_findings=None):
+    schema_text = format_schema(schema)
+    tables_text = format_list(extracted_tables)
+    columns_text = format_list(extracted_columns)
+    findings_text = format_findings(existing_findings)
 
     prompt = f"""
 You are a Principal Database Architect performing a production-grade SQL review.
@@ -36,6 +58,18 @@ Review the SQL script for:
 8. SQL anti-patterns
 9. Schema adherence
 10. Naming accuracy and typo detection
+
+Known schema:
+{schema_text}
+
+Extracted tables:
+{tables_text}
+
+Extracted columns:
+{columns_text}
+
+Existing local findings:
+{findings_text}
 
 Validation requirements:
 - Check for invalid, suspicious, inconsistent, or misspelled table names, column names, aliases, and views.
